@@ -1,18 +1,27 @@
-// Garde la couleur du lien actif de la navbar
+const burgerIcon = document.querySelector(".burgerIcon");
+const crossIcon = document.querySelector(".crossIcon");
+const mobileContent = document.querySelector(".mobileContent");
+const menuLinks = document.querySelectorAll(".mobileContent a");
 
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll("#menu-header .menu-item a"); // Sélectionne tous les liens dans le menu
-  const currentUrl = window.location.pathname; // Récupère le chemin relatif de l'URL actuelle
+// Ouverture du menu mobile
+burgerIcon.addEventListener("click", () => {
+  mobileContent.classList.add("open");
+  burgerIcon.classList.add("hiddenNow");
+  crossIcon.classList.remove("hiddenNow");
+});
 
-  links.forEach((link) => {
-    const linkUrl = new URL(link.href); // Crée un objet URL pour le lien
-    const linkPath = linkUrl.pathname; // Récupère le chemin relatif du lien
+// Fermeture du menu mobile
+crossIcon.addEventListener("click", () => {
+  mobileContent.classList.remove("open");
+  burgerIcon.classList.remove("hiddenNow");
+  crossIcon.classList.add("hiddenNow");
+});
 
-    // Si le chemin du lien correspond au chemin de la page actuelle, ajoute la classe 'active'
-    if (linkPath === currentUrl || (currentUrl === "/" && linkPath === "/")) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
+// Ajoute un événement de clic sur les liens du menu burger
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileContent.classList.remove("open");
+    burgerIcon.classList.remove("hiddenNow");
+    crossIcon.classList.add("hiddenNow");
   });
 });

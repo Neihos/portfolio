@@ -33,10 +33,6 @@ body {
 
 // home
 
-#mobileNav {
-  display: none;
-}
-
 #heroHeader {
   display: flex;
   background: url("/wp-content/themes/novaneos/assets/images/fondBlanc.webp")
@@ -154,39 +150,66 @@ body {
   }
 }
 
+//menu
+#mobileNav {
+  display: none;
+}
+
 #menuHeader {
-  width: 100px;
+  width: 250px;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 99;
-  ul li {
-    list-style: none;
-    a {
-      text-decoration: none;
-      i {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        color: rgb(255, 255, 255);
-        font-size: 25px;
-        background-color: rgb(206, 16, 16);
-        border-radius: 30px;
-        margin: 15px;
-        width: 60px;
-        height: 60px;
-        &:hover {
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        i {
+          display: inline-flex;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: center;
+          align-items: center;
           color: rgb(255, 255, 255);
-          background-color: black;
+          font-size: 25px;
+          background-color: rgb(206, 16, 16);
+          border-radius: 30px;
+          margin: 15px;
+          width: 60px;
+          height: 60px;
+          transition: all 0.3s ease;
+          p {
+            display: none;
+          }
+          &:hover {
+            width: 250px;
+            color: rgb(255, 255, 255);
+            background-color: black;
+            p {
+              display: inline;
+              text-align: center;
+              width: 75%;
+            }
+          }
         }
       }
     }
   }
+}
+
+.mobileContent {
+  display: none;
 }
 
 @media (max-width: 767px) {
@@ -204,7 +227,7 @@ body {
     z-index: 99;
   }
   .mobileContent {
-    display: flex;
+    display: none;
     width: 100vw;
     height: 100vh;
     z-index: 99;
@@ -238,5 +261,8 @@ body {
         }
       }
     }
+  }
+  .open {
+    display: flex;
   }
 }

@@ -18,27 +18,27 @@
     <ul>
       <li>  
           <a href="<?php echo home_url(); ?>" alt="Acceuil">
-            <i class="fa-solid fa-house-chimney"></i>
+            <i class="fa-solid fa-house-chimney"><p>Acceuil</p></i>
           </a> 
       </li>
       <li>      
           <a href="#dream" alt="profil">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-user"><p>Skills</p></i>
           </a>
       </li>
       <li>      
           <a href="<?php echo home_url(); ?>">
-            <i class="fa-solid fa-laptop-file"></i>
+            <i class="fa-solid fa-laptop-file"><p>Portfolio</p></i>
           </a>
       </li>
       <li>      
           <a href="<?php echo home_url(); ?>">
-            <i class="fa-solid fa-envelopes-bulk"></i>
+            <i class="fa-solid fa-envelopes-bulk"><p>Contact</p></i>
           </a>
       </li>
       <li>      
           <a href="<?php echo home_url(); ?>">
-            <i class="fa-brands fa-microblog"></i>
+            <i class="fa-brands fa-microblog"><p>Blog</p></i>
           </a>
       </li>
     </ul>

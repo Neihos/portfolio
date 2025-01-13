@@ -97,10 +97,6 @@ body {
   z-index: 0;
 }
 
-#mobileNav {
-  display: none;
-}
-
 #heroHeader {
   display: flex;
   background: url("/wp-content/themes/novaneos/assets/images/fondBlanc.webp") no-repeat center/cover;
@@ -213,17 +209,27 @@ body {
     display: none;
   }
 }
+#mobileNav {
+  display: none;
+}
+
 #menuHeader {
-  width: 100px;
+  width: 250px;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 99;
+}
+#menuHeader ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 #menuHeader ul li {
   list-style: none;
@@ -233,6 +239,8 @@ body {
 }
 #menuHeader ul li a i {
   display: inline-flex;
+  display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
   color: rgb(255, 255, 255);
@@ -242,10 +250,24 @@ body {
   margin: 15px;
   width: 60px;
   height: 60px;
+  transition: all 0.3s ease;
+}
+#menuHeader ul li a i p {
+  display: none;
 }
 #menuHeader ul li a i:hover {
+  width: 250px;
   color: rgb(255, 255, 255);
   background-color: black;
+}
+#menuHeader ul li a i:hover p {
+  display: inline;
+  text-align: center;
+  width: 75%;
+}
+
+.mobileContent {
+  display: none;
 }
 
 @media (max-width: 767px) {
@@ -263,7 +285,7 @@ body {
     z-index: 99;
   }
   .mobileContent {
-    display: flex;
+    display: none;
     width: 100vw;
     height: 100vh;
     z-index: 99;
@@ -297,5 +319,8 @@ body {
     width: 100%;
     text-align: center;
     margin-left: 10px;
+  }
+  .open {
+    display: flex;
   }
 }/*# sourceMappingURL=theme.css.map */
