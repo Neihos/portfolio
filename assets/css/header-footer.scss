@@ -1,0 +1,126 @@
+// Masque le menu mobile dans les résolutions > 767px
+#mobileNav {
+  display: none;
+}
+
+// Menu Desktop et tablette
+#menuHeader {
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        i {
+          display: inline-flex;
+          flex-direction: row-reverse;
+          justify-content: center;
+          align-items: center;
+          color: rgb(255, 255, 255);
+          font-size: 25px;
+          background-color: rgb(206, 16, 16);
+          border-radius: 30px;
+          margin: 15px;
+          width: 60px;
+          height: 60px;
+          transition: all 0.3s ease;
+          p {
+            text-shadow: 0 0 20px #00fffb, 0 0 40px #0081bc;
+            display: none;
+          }
+          &:hover {
+            width: 250px;
+            text-shadow: 0 0 20px #00fffb, 0 0 40px #0081bc;
+            background-color: black;
+            p {
+              display: inline;
+              text-align: center;
+              font-family: "Poppins", Arial, Helvetica, sans-serif;
+              font-weight: 600;
+              width: 75%;
+              animation: reveal 0.5s ease forwards;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #menuHeader {
+    display: none;
+  }
+  #mobileNav {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 98;
+    .burgerIcon,
+    .crossIcon {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      z-index: 99;
+    }
+    .mobileContent {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 98;
+      width: 100vw;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background: url("/wp-content/themes/novaneos//assets/images/mobileBackG.webp") no-repeat center / cover;
+      ul li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          i {
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            font-size: 25px;
+            background-color: rgb(206, 16, 16);
+            border-radius: 30px;
+            margin: 15px;
+            padding: 20px;
+            width: 250px;
+            height: 60px;
+            &:hover {
+              color: rgb(255, 255, 255);
+              background-color: black;
+            }
+            p {
+              width: 100%;
+              font-family: "Poppins", Arial, Helvetica, sans-serif;
+              font-weight: 600;
+              text-align: center;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+      &.open {
+        display: flex;
+      }
+    }
+  }
+}

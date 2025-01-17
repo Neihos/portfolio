@@ -22,7 +22,7 @@
           </a> 
       </li>
       <li>      
-          <a href="#dream" alt="profil">
+          <a href="#skill" alt="profil">
             <i class="fa-solid fa-user"><p>Skills</p></i>
           </a>
       </li>
@@ -49,37 +49,41 @@
       <img class="burgerIcon" src="<?php echo get_template_directory_uri(); ?>/assets/images/burgerIcone.svg" alt="icone burger menu">
       <img class="crossIcon hiddenNow" src="<?php echo get_template_directory_uri(); ?>/assets/images/crossIcone.svg" alt="Icone croix">
     </section>
-    
-  </nav>
     <section class="mobileContent">
       <ul>
-      <li>  
+        <li>  
           <a href="<?php echo home_url(); ?>" alt="Acceuil">
             <i class="fa-solid fa-house-chimney"><p>Accueil</p></i>
           </a> 
-      </li>
-      <li>      
-          <a href="#dream" alt="profil">
+        </li>  
+          <li>      
+           <a href="#skill" alt="profil">
             <i class="fa-solid fa-user"><p>Skills</p></i>
           </a>
-      </li>
-      <li>      
+        </li>
+        <li>      
           <a href="<?php echo home_url(); ?>">
             <i class="fa-solid fa-laptop-file"><p>Portfolio</p></i>
           </a>
-      </li>
-      <li>      
+        </li>
+        <li>      
           <a href="<?php echo home_url(); ?>">
             <i class="fa-solid fa-envelopes-bulk"><p>Contact</p></i>
           </a>
-      </li>
-      <li>      
+        </li>
+        <li>      
           <a href="<?php echo home_url(); ?>">
             <i class="fa-brands fa-microblog"><p>Blog</p></i>
           </a>
-      </li>
-    </ul>
+        </li>
+      </ul>
     </section>
+    
+
+    
+    
+  </nav>
+    
   
 </header>
 

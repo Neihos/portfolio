@@ -35,3 +35,49 @@
   }
   @include opa;
 }
+
+@keyframes reveal {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+  @include opa
+}
+
+@keyframes animHtml {
+  100% {
+    stroke-dashoffset: 80;
+  }
+}
+
+@keyframes animWp {
+  100% {
+    stroke-dashoffset: 100;
+  }
+}
+
+@keyframes animCss {
+  100% {
+    stroke-dashoffset: 140;
+  }
+}
+
+@keyframes animSql {
+  100% {
+    stroke-dashoffset: 270;
+  }
+}
+
+@keyframes animJs {
+  100% {
+    stroke-dashoffset: 220;
+  }
+}
+
+@keyframes animPhp {
+  100% {
+    stroke-dashoffset: 242;
+  }
+}
