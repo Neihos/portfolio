@@ -22,7 +22,7 @@
           </a> 
       </li>
       <li>      
-          <a href="#skill" alt="profil">
+          <a href="#mySkills" alt="profil">
             <i class="fa-solid fa-user"><p>Skills</p></i>
           </a>
       </li>
@@ -57,7 +57,7 @@
           </a> 
         </li>  
           <li>      
-           <a href="#skill" alt="profil">
+           <a href="#mySkills" alt="profil">
             <i class="fa-solid fa-user"><p>Skills</p></i>
           </a>
         </li>

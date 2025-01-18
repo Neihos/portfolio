@@ -3,8 +3,8 @@
  * The Template for displaying all single posts
  *
  * @package WordPress
- * @subpackage Nathalie_Mota
- * @since Nathalie Mota 1.0
+ * @subpackage novaneos theme
+ * @since novaneos 1.0
  */
 
 get_header(); ?>

@@ -364,31 +364,63 @@ body {
   z-index: 1;
 }
 
-#skill {
-  display: grid;
-  width: 100vw;
-  height: auto;
+#mySkills {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: auto;
   min-height: 100vh;
   position: relative;
   background: linear-gradient(rgba(230, 230, 230, 0.918), rgba(230, 230, 230, 0.918)), url("/wp-content/themes/novaneos/assets/images/codebg.webp") repeat center;
   background-size: 200px;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
+}
+#mySkills .skillsTitle {
+  top: 50px;
+  margin: 50px 0;
+  font-size: clamp(1.5rem, 1.243rem + 1.098vw, 3rem);
+  text-align: center;
+  font-family: "Lobster", Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  text-shadow: 1px 1px black;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+  animation: fallDown 2s 1s forwards;
+}
+#mySkills .skillContainer {
+  display: flex;
+  min-height: 85vh;
+  align-items: center;
+  margin-bottom: 50px;
+}
+#mySkills #skill {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
-  align-items: center;
-  padding: 0 100px;
-  gap: 0 40px;
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2470588235), 0 0 100px #000000;
 }
-#skill .skillBox {
+#mySkills #skill .skillBox {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#mySkills #skill .skillBox .skillContent {
   height: 160px;
   width: 160px;
   border-radius: 50%;
   position: relative;
+  margin-top: 10px;
   padding: 20px;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
-#skill .skillBox .inner {
+#mySkills #skill .skillBox .skillContent .inner {
   height: 120px;
   width: 120px;
   display: flex;
@@ -397,55 +429,56 @@ body {
   border-radius: 50%;
   box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgb(255, 255, 255), -0.5px -0.5px 0px rgb(255, 255, 255), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
 }
-#skill .skillBox .inner #number {
+#mySkills #skill .skillBox .skillContent .inner #number {
   font-weight: 600;
   font-size: 24px;
   color: #555;
 }
-#skill .skillBox .inner svg {
+#mySkills #skill .skillBox .skillContent .inner svg {
   position: absolute;
 }
-#skill #myHtml,
-#skill #myWordpress,
-#skill #myCss,
-#skill #mySql,
-#skill #myJavascript,
-#skill #myPhp {
+#mySkills #skill #myHtml,
+#mySkills #skill #myWordpress,
+#mySkills #skill #myCss,
+#mySkills #skill #mySql,
+#mySkills #skill #myJavascript,
+#mySkills #skill #myPhp {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 380px;
-  height: 500px;
-  gap: 20px;
+  height: auto;
   max-width: 500px;
+  padding: 20px 0;
 }
-#skill #myHtml .iconCode,
-#skill #myWordpress .iconCode,
-#skill #myCss .iconCode,
-#skill #mySql .iconCode,
-#skill #myJavascript .iconCode,
-#skill #myPhp .iconCode {
+#mySkills #skill #myHtml .iconCode,
+#mySkills #skill #myWordpress .iconCode,
+#mySkills #skill #myCss .iconCode,
+#mySkills #skill #mySql .iconCode,
+#mySkills #skill #myJavascript .iconCode,
+#mySkills #skill #myPhp .iconCode {
   display: flex;
-  width: 200px;
-  height: 200px;
+  width: 80px;
+  height: 80px;
   align-items: center;
   justify-content: center;
   color: var(--primary-color);
   text-shadow: 1px 1px rgb(51, 51, 51);
   font-size: 24px;
 }
-#skill #myHtml p,
-#skill #myWordpress p,
-#skill #myCss p,
-#skill #mySql p,
-#skill #myJavascript p,
-#skill #myPhp p {
-  width: 380px;
-  height: 250px;
+#mySkills #skill #myHtml p,
+#mySkills #skill #myWordpress p,
+#mySkills #skill #myCss p,
+#mySkills #skill #mySql p,
+#mySkills #skill #myJavascript p,
+#mySkills #skill #myPhp p {
+  width: 100%;
+  height: 280px;
   background: var(--secondary-color);
-  border: 2px solid var(--primary-color);
-  border-radius: 6px;
+  border: 1px solid rgb(151, 150, 150);
+  border-top: none;
+  border-radius: 0px 0px 6px 6px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   padding: 5px;
   display: flex;
@@ -453,81 +486,101 @@ body {
   justify-content: center;
   text-align: center;
 }
-#skill details {
+#mySkills #skill details {
+  width: 80%;
   margin: 20px 0;
   font-family: "Poppins", Arial, sans-serif;
   font-size: 16px;
   cursor: pointer;
 }
-#skill details summary {
+#mySkills #skill details summary {
   background-color: var(--secondary-color);
-  color: var(--primary-color);
   padding: 10px;
   border-radius: 5px;
   box-shadow: 5px 5px 10px rgb(107, 106, 106);
   border: 1px solid rgb(151, 150, 150);
   list-style: none;
+  text-align: center;
 }
-#skill details summary:hover {
+#mySkills #skill details summary:hover {
   transform: scale(1.1);
-  font-weight: 700;
 }
-#skill circle {
+#mySkills #skill details summary .skillName {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+#mySkills #skill details summary i {
+  font-size: 24px;
+  margin-right: 7px;
+}
+#mySkills #skill circle {
   fill: none;
   stroke: url(#grandientColor);
   stroke-width: 20px;
   stroke-dasharray: 472;
   stroke-dashoffset: 472;
 }
-#skill #myHtml .iconCode {
+#mySkills #skill #myHtml .iconCode {
   background: url("/wp-content/themes/novaneos/assets/images/html-5.webp") no-repeat center/contain;
 }
-#skill #myHtml circle {
+#mySkills #skill #myHtml circle {
   animation: animHtml 2s linear forwards;
 }
-#skill #myWordpress .iconCode {
+#mySkills #skill #myWordpress .iconCode {
   background: url("/wp-content/themes/novaneos/assets/images/wordpress.webp") no-repeat center/contain;
 }
-#skill #myWordpress circle {
+#mySkills #skill #myWordpress circle {
   animation: animWp 2s linear forwards;
 }
-#skill #myCss .iconCode {
+#mySkills #skill #myCss .iconCode {
   background: url("/wp-content/themes/novaneos/assets/images/css-3.webp") no-repeat center/contain;
 }
-#skill #myCss circle {
+#mySkills #skill #myCss circle {
   animation: animCss 2s linear forwards;
 }
-#skill #mySql .iconCode {
+#mySkills #skill #mySql .iconCode {
   background: url("/wp-content/themes/novaneos/assets/images/sql-server.webp") no-repeat center/contain;
 }
-#skill #mySql circle {
+#mySkills #skill #mySql circle {
   animation: animSql 2s linear forwards;
 }
-#skill #myJavascript .iconCode {
+#mySkills #skill #myJavascript .iconCode {
   background: url("/wp-content/themes/novaneos/assets/images/js.webp") no-repeat center/contain;
 }
-#skill #myJavascript circle {
+#mySkills #skill #myJavascript circle {
   animation: animJs 2s linear forwards;
 }
-#skill #myPhp .iconCode {
+#mySkills #skill #myPhp .iconCode {
   background: url("/wp-content/themes/novaneos/assets/images/php.webp") no-repeat center/contain;
 }
-#skill #myPhp circle {
+#mySkills #skill #myPhp circle {
   animation: animPhp 2s linear forwards;
+}
+#mySkills .titleMoveSkill {
+  position: absolute;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(182, 23, 23, 0.712);
+  font-size: clamp(1.5rem, 0.417rem + 4.34vw, 5.625rem);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  top: 88vh;
 }
 
 @media (max-width: 1430px) {
-  #skill {
+  #mySkills #skill {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .titleMoveSkill {
+    display: none;
   }
 }
 @media (max-width: 1024px) {
-  #skill {
+  #mySkills #skill {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 @media (max-width: 767px) {
-  .skillBox {
+  #mySkills .skillBox {
     padding: 0;
   }
 }
@@ -537,7 +590,7 @@ body {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: auto;
   position: relative;
   padding: 50px 100px;
 }

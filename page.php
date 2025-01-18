@@ -7,8 +7,8 @@
  * other 'pages' on your WordPress site will use a different template.
  *
  * @package WordPress
- * @subpackage nathalie-mota theme
- * @since nathalie-mota 1.0
+ * @subpackage novaneos theme
+ * @since novaneos 1.0
  */
 
 get_header(); ?>
