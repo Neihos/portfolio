@@ -4,11 +4,6 @@
   padding: 0;
 }
 
-:root {
-  --primary-color: rgb(206, 16, 16);
-  --secondary-color: rgb(230, 230, 230);
-}
-
 /* Poppins font-face declarations */
 @font-face {
   font-display: swap;
@@ -125,161 +120,30 @@
     stroke-dashoffset: 242;
   }
 }
-#mobileNav {
-  display: none;
-}
-
-#menuHeader {
-  width: 250px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 99;
-}
-#menuHeader ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-#menuHeader ul li {
-  list-style: none;
-}
-#menuHeader ul li a {
-  text-decoration: none;
-}
-#menuHeader ul li a i {
-  display: inline-flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-  color: rgb(255, 255, 255);
-  font-size: 25px;
-  background-color: rgb(206, 16, 16);
-  border-radius: 30px;
-  margin: 15px;
-  width: 60px;
-  height: 60px;
-  transition: all 0.3s ease;
-}
-#menuHeader ul li a i p {
-  text-shadow: 0 0 20px #00fffb, 0 0 40px #0081bc;
-  display: none;
-}
-#menuHeader ul li a i:hover {
-  width: 250px;
-  text-shadow: 0 0 20px #00fffb, 0 0 40px #0081bc;
-  background-color: black;
-}
-#menuHeader ul li a i:hover p {
-  display: inline;
-  text-align: center;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  width: 75%;
-  animation: reveal 0.5s ease forwards;
-}
-
-@media (max-width: 767px) {
-  #menuHeader {
-    display: none;
+@keyframes reveal2 {
+  0% {
+    transform: translateY(-250px);
   }
-  #mobileNav {
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: auto;
-    z-index: 98;
+  100% {
+    transform: translateY(0px);
   }
-  #mobileNav .burgerIcon,
-  #mobileNav .crossIcon {
-    position: absolute;
-    top: 40px;
-    right: 40px;
-    z-index: 99;
+  from {
+    opacity: 0;
   }
-  #mobileNav .mobileContent {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 98;
-    width: 100vw;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background: url("/wp-content/themes/novaneos//assets/images/mobileBackG.webp") no-repeat center/cover;
-  }
-  #mobileNav .mobileContent ul li {
-    list-style: none;
-  }
-  #mobileNav .mobileContent ul li a {
-    text-decoration: none;
-  }
-  #mobileNav .mobileContent ul li a i {
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    color: rgb(255, 255, 255);
-    font-size: 25px;
-    background-color: rgb(206, 16, 16);
-    border-radius: 30px;
-    margin: 15px;
-    padding: 20px;
-    width: 250px;
-    height: 60px;
-  }
-  #mobileNav .mobileContent ul li a i:hover {
-    color: rgb(255, 255, 255);
-    background-color: black;
-  }
-  #mobileNav .mobileContent ul li a i p {
-    width: 100%;
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    text-align: center;
-    margin-left: 10px;
-  }
-  #mobileNav .mobileContent.open {
-    display: flex;
+  to {
+    opacity: 1;
   }
 }
-body {
-  position: relative;
-}
-
-.hiddenNow {
-  display: none;
-}
-
-.main-container {
-  max-width: 2560px;
-}
-
-.overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
 #heroHeader {
   display: flex;
-  background: url("/wp-content/themes/novaneos/assets/images/fondBlanc.webp") no-repeat center/cover;
+  background: url("/wp-content/themes/novaneos/assets/images/fondNoir.webp") no-repeat center/cover;
   position: relative;
   height: 100vh;
 }
 #heroHeader .titleMove {
   position: absolute;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(182, 23, 23, 0.712);
+  -webkit-text-stroke: 1px var(--primary-color);
   font-size: clamp(1.5rem, 0.417rem + 4.34vw, 5.625rem);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   left: 20px;
@@ -364,6 +228,11 @@ body {
   z-index: 1;
 }
 
+@media (max-width: 767px) {
+  #heroHeader .hero .picture {
+    display: none;
+  }
+}
 #mySkills {
   display: flex;
   align-items: center;
@@ -372,7 +241,7 @@ body {
   width: auto;
   min-height: 100vh;
   position: relative;
-  background: linear-gradient(rgba(230, 230, 230, 0.918), rgba(230, 230, 230, 0.918)), url("/wp-content/themes/novaneos/assets/images/codebg.webp") repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.918), rgba(0, 0, 0, 0.918)), url("/wp-content/themes/novaneos/assets/images/codebg.webp") repeat center;
   background-size: 200px;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
@@ -388,28 +257,28 @@ body {
   text-shadow: 1px 1px black;
   letter-spacing: 2px;
   color: var(--primary-color);
-  animation: fallDown 2s 1s forwards;
+  opacity: 0;
+  animation: reveal 2s 1s forwards;
 }
 #mySkills .skillContainer {
   display: flex;
   min-height: 85vh;
   align-items: center;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 #mySkills #skill {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
-  background-color: var(--secondary-color);
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2470588235), 0 0 100px #000000;
 }
 #mySkills #skill .skillBox {
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-evenly;
+  padding-bottom: 20px;
 }
 #mySkills #skill .skillBox .skillContent {
   height: 160px;
@@ -418,7 +287,8 @@ body {
   position: relative;
   margin-top: 10px;
   padding: 20px;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  border: 1px solid rgb(146, 1, 1);
+  box-shadow: 6px 6px 10px -1px rgb(146, 1, 1);
 }
 #mySkills #skill .skillBox .skillContent .inner {
   height: 120px;
@@ -426,13 +296,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid rgb(146, 1, 1);
   border-radius: 50%;
-  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgb(255, 255, 255), -0.5px -0.5px 0px rgb(255, 255, 255), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 4px 4px 6px -1px rgb(146, 1, 1);
 }
 #mySkills #skill .skillBox .skillContent .inner #number {
   font-weight: 600;
   font-size: 24px;
-  color: #555;
+  color: #cccccc;
 }
 #mySkills #skill .skillBox .skillContent .inner svg {
   position: absolute;
@@ -447,7 +318,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 380px;
+  width: 370px;
+  margin: 0 1vw;
   height: auto;
   max-width: 500px;
   padding: 20px 0;
@@ -474,10 +346,11 @@ body {
 #mySkills #skill #myJavascript p,
 #mySkills #skill #myPhp p {
   width: 100%;
-  height: 280px;
+  height: 230px;
   background: var(--secondary-color);
+  color: white;
+  box-shadow: 5px 5px 10px rgb(107, 106, 106);
   border: 1px solid rgb(151, 150, 150);
-  border-top: none;
   border-radius: 0px 0px 6px 6px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   padding: 5px;
@@ -486,33 +359,41 @@ body {
   justify-content: center;
   text-align: center;
 }
-#mySkills #skill details {
-  width: 80%;
-  margin: 20px 0;
+#mySkills #skill .details {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
   font-family: "Poppins", Arial, sans-serif;
   font-size: 16px;
   cursor: pointer;
 }
-#mySkills #skill details summary {
-  background-color: var(--secondary-color);
+#mySkills #skill .details .nameSkill {
   padding: 10px;
   border-radius: 5px;
   box-shadow: 5px 5px 10px rgb(107, 106, 106);
   border: 1px solid rgb(151, 150, 150);
   list-style: none;
   text-align: center;
+  color: white;
 }
-#mySkills #skill details summary:hover {
-  transform: scale(1.1);
-}
-#mySkills #skill details summary .skillName {
+#mySkills #skill .details .nameSkill .skillName {
   font-size: 24px;
   font-weight: 700;
   color: var(--primary-color);
 }
-#mySkills #skill details summary i {
+#mySkills #skill .details .nameSkill i {
   font-size: 24px;
   margin-right: 7px;
+}
+#mySkills #skill .details .description {
+  display: none;
+  position: absolute;
+  z-index: 2;
+}
+#mySkills #skill .details:hover .description {
+  display: block;
+  animation: reveal2 0.5s ease-in-out;
 }
 #mySkills #skill circle {
   fill: none;
@@ -540,7 +421,7 @@ body {
   animation: animCss 2s linear forwards;
 }
 #mySkills #skill #mySql .iconCode {
-  background: url("/wp-content/themes/novaneos/assets/images/sql-server.webp") no-repeat center/contain;
+  background: url("/wp-content/themes/novaneos/assets/images/mysql.webp") no-repeat center/contain;
 }
 #mySkills #skill #mySql circle {
   animation: animSql 2s linear forwards;
@@ -560,10 +441,10 @@ body {
 #mySkills .titleMoveSkill {
   position: absolute;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(182, 23, 23, 0.712);
+  -webkit-text-stroke: 1px var(--primary-color);
   font-size: clamp(1.5rem, 0.417rem + 4.34vw, 5.625rem);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
-  top: 88vh;
+  bottom: 0vh;
 }
 
 @media (max-width: 1430px) {
@@ -584,40 +465,158 @@ body {
     padding: 0;
   }
 }
-#skillsLine {
+#mobileNav {
+  display: none;
+}
+
+#menuHeader {
+  width: 250px;
+  height: 100vh;
   display: flex;
-  background: url("/wp-content/themes/novaneos/assets/images/fondBlanc.webp") no-repeat center/cover;
   flex-direction: column;
+  align-items: flex-end;
   justify-content: center;
-  width: 100%;
-  height: auto;
-  position: relative;
-  padding: 50px 100px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
 }
-#skillsLine .skillsContainer {
-  padding: 10px;
-  position: relative;
-  width: 50%;
-  border-radius: 6px;
-  background: var(--primary-color);
+#menuHeader ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
-#skillsLine .skillsContainer .text-box {
-  padding: 20px 30px;
-  background: #fff;
-  position: relative;
-  border-radius: 6px;
-  font-size: 15px;
+#menuHeader ul li {
+  list-style: none;
+}
+#menuHeader ul li a {
+  text-decoration: none;
+}
+#menuHeader ul li a i {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  background-color: rgb(206, 16, 16);
+  border-radius: 30px;
+  margin: 15px;
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s ease;
+}
+#menuHeader ul li a i p {
+  text-shadow: 0 0 20px #000000, 0 0 40px #000000;
+  display: none;
+}
+#menuHeader ul li a i:hover {
+  width: 250px;
+}
+#menuHeader ul li a i:hover p {
+  display: inline;
+  text-align: center;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
-}
-#skillsLine .rightSide {
-  left: 50%;
-}
-#skillsLine .leftSide {
-  right: 0%;
+  font-weight: 600;
+  width: 75%;
+  animation: reveal 0.5s ease forwards;
 }
 
 @media (max-width: 767px) {
-  #heroHeader .hero .picture {
+  #menuHeader {
     display: none;
   }
+  #mobileNav {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 98;
+  }
+  #mobileNav .burgerIcon,
+  #mobileNav .crossIcon {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 99;
+  }
+  #mobileNav .mobileContent {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 98;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: url("/wp-content/themes/novaneos//assets/images/mobileBackG.webp") no-repeat center/cover;
+  }
+  #mobileNav .mobileContent ul li {
+    list-style: none;
+  }
+  #mobileNav .mobileContent ul li a {
+    text-decoration: none;
+  }
+  #mobileNav .mobileContent ul li a i {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    background-color: rgb(206, 16, 16);
+    border-radius: 30px;
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
+    height: 60px;
+  }
+  #mobileNav .mobileContent ul li a i:hover {
+    color: rgb(255, 255, 255);
+    background-color: black;
+  }
+  #mobileNav .mobileContent ul li a i p {
+    width: 100%;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 10px;
+  }
+  #mobileNav .mobileContent.open {
+    display: flex;
+  }
+}
+:root {
+  --primary-color: rgb(206, 16, 16);
+  --secondary-color: rgb(19, 18, 18);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--primary-color);
+}
+
+/* Firefox Scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) rgba(206, 16, 16, 0.26);
+}
+
+body {
+  position: relative;
+  background-color: black;
+}
+
+.hiddenNow {
+  display: none;
+}
+
+.main-container {
+  max-width: 2560px;
 }/*# sourceMappingURL=theme.css.map */

@@ -7,7 +7,10 @@
  * @since novaneos 1.0
  */
 
-get_header(); ?>
+get_header();
+
+include('template_parts/infos_site.php');
+?>
 
 <main class="single-container">
 
@@ -22,13 +25,18 @@ if ( have_posts() ) :
 
     <article class="preview-site">
 
-        <section class="siteOnTop">
+        <section class="siteOnPage">
             <div class="single-content">            
                 <h1 class="post-title"><?php the_title(); ?></h1>
-                <div class="reference">Référence : <?php the_field( 'reference' ); ?></div>
-                <div class="publication-year">Année : <?php echo get_the_date('Y'); ?></div>
+                <img 
+                    src="<?php echo esc_url( $image_url ); ?>"
+                >
+                <div class="publication-year">Date : <?php echo get_the_date('j F Y'); ?></div>
+                <div class="description"><?php echo get_field('description'); ?></div>
+                <a class="linkToSite" href="<?php echo get_field('lien_vers_le_site'); ?>">Voir le site</a>           
             </div>        
         </section>
+                
 
     </article>
     

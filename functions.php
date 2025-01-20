@@ -43,15 +43,8 @@ function novaneos_enqueue_scripts() {
     ));
 }
 
-// Enregistrement des emplacements de menus du thème
-function novaneos_register_menus() {
-    register_nav_menu('main', "Menu principal");
-    register_nav_menu('footer', "Menu pied de page");
-}
-
 // Actions pour charger les styles, scripts et menus
 add_action('wp_enqueue_scripts', 'novaneos_enqueue_styles');
 add_action('wp_enqueue_scripts', 'novaneos_enqueue_scripts');
-add_action('after_setup_theme', 'novaneos_register_menus');
 
 ?>

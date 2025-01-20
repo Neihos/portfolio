@@ -4,19 +4,38 @@
   padding: 0;
 }
 
-:root {
-  --primary-color: rgb(206, 16, 16);
-  --secondary-color: rgb(230, 230, 230);
-}
-
 @import "fonts";
 
 @import "animations";
 
+@import "homePage";
+
 @import "header-footer";
+
+:root {
+  --primary-color: rgb(206, 16, 16);
+  --secondary-color: rgb(19, 18, 18);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--primary-color);
+}
+
+/* Firefox Scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) rgba(206, 16, 16, 0.26);
+}
 
 body {
   position: relative;
+  background-color: black;
 }
 
 .hiddenNow {
@@ -27,398 +46,5 @@ body {
   max-width: 2560px;
 }
 
-.overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-// home
-
-#heroHeader {
-  display: flex;
-  background: url("/wp-content/themes/novaneos/assets/images/fondBlanc.webp")
-    no-repeat center / cover;
-  position: relative;
-  height: 100vh;
-  .titleMove {
-    position: absolute;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(182, 23, 23, 0.712);
-    font-size: clamp(1.5rem, 0.417rem + 4.34vw, 5.625rem);
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
-    left: 20px;
-  }
-  .hero {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin: 0 auto;
-    .textArea {
-      display: flex;
-      width: 66%;
-      padding: 20px;
-      align-items: center;
-      justify-content: center;
-      .inTextArea {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-        .theTitle {
-          text-align: center;
-          z-index: 1;
-          opacity: 0;
-          font-size: clamp(3rem, 1.714rem + 2.679vw, 6rem);
-          font-family: "Lobster", Arial, Helvetica, sans-serif;
-          font-style: italic;
-          font-weight: 300;
-          text-shadow: 1px 1px black;
-          letter-spacing: 2px;
-          color: var(--primary-color);
-          animation: fallDown 2s 1s forwards;
-        }
-        .slogan {
-          text-align: center;
-          opacity: 0;
-          font-size: clamp(1.6rem, 1.171rem + 0.893vw, 2.6rem);
-          font-family: Arial, Helvetica, sans-serif;
-          font-style: italic;
-          font-weight: 600;
-          letter-spacing: 2px;
-          text-shadow: 1px 1px black;
-          color: var(--primary-color);
-          animation: translation-X 2s 1.5s forwards;
-        }
-      }
-    }
-    .picture {
-      display: flex;
-      justify-content: flex-start;
-      width: 33%;
-      min-width: 350px;
-
-      .photo {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        width: auto;
-        height: auto;
-        margin-right: 100px;
-        overflow: hidden;
-
-        &::before {
-          content: "";
-          position: absolute;
-          background-color: var(--secondary-color);
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 2;
-          transform: translateX(0);
-          animation: translationX 1s 0.5s ease forwards;
-        }
-
-        img {
-          aspect-ratio: 500 / 1110;
-          max-height: 100vh;
-          object-fit: cover;
-          position: relative;
-          z-index: 1;
-        }
-      }
-    }
-  }
-}
-
-//2-------------------
-
-#mySkills {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
-  width: auto;
-  min-height: 100vh;
-  position: relative;
-  background: linear-gradient(
-      rgba(230, 230, 230, 0.918),
-      rgba(230, 230, 230, 0.918)
-    ),
-    url("/wp-content/themes/novaneos/assets/images/codebg.webp") repeat center;
-  background-size: 200px;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
-  .skillsTitle {
-    top: 50px;
-    margin: 50px 0;
-    font-size: clamp(1.5rem, 1.243rem + 1.098vw, 3rem);
-    text-align: center;
-    font-family: "Lobster", Arial, Helvetica, sans-serif;
-    font-style: italic;
-    font-weight: 300;
-    text-shadow: 1px 1px black;
-    letter-spacing: 2px;
-    color: var(--primary-color);
-    animation: fallDown 2s 1s forwards;
-  }
-  .skillContainer {
-    display: flex;
-    min-height: 85vh;
-    align-items: center;
-    margin-bottom: 50px;
-  }
-  #skill {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    background-color: var(--secondary-color);
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 0 20px #0000003f, 0 0 100px #000000;
-    .skillBox {
-      display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: space-evenly;
-      .skillContent {
-        height: 160px;
-        width: 160px;
-        border-radius: 50%;
-        position: relative;
-        margin-top: 10px;
-        padding: 20px;
-        box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-          -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-        .inner {
-          height: 120px;
-          width: 120px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 50%;
-          box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-            inset -4px -4px 6px -1px rgba(255, 255, 255, 1),
-            -0.5px -0.5px 0px rgba(255, 255, 255, 1),
-            0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
-            0px 12px 10px -10px rgba(0, 0, 0, 0.05);
-          #number {
-            font-weight: 600;
-            font-size: 24px;
-            color: #555;
-          }
-          svg {
-            position: absolute;
-          }
-        }
-      }
-    }
-    #myHtml,
-    #myWordpress,
-    #myCss,
-    #mySql,
-    #myJavascript,
-    #myPhp {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 380px;
-      height: auto;
-      max-width: 500px;
-      padding: 20px 0;
-      .iconCode {
-        display: flex;
-        width: 80px;
-        height: 80px;
-        align-items: center;
-        justify-content: center;
-        color: var(--primary-color);
-        text-shadow: 1px 1px rgb(51, 51, 51);
-        font-size: 24px;
-      }
-      p {
-        width: 100%;
-        height: 280px;
-        background: var(--secondary-color);
-        border: 1px solid rgb(151, 150, 150);
-        border-top: none;
-        border-radius: 0px 0px 6px 6px;
-        font-family: "Poppins", Arial, Helvetica, sans-serif;
-        padding: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-      }
-    }
-
-    details {
-      width: 80%;
-      margin: 20px 0;
-      font-family: "Poppins", Arial, sans-serif;
-      font-size: 16px;
-      cursor: pointer;
-      summary {
-        background-color: var(--secondary-color);
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 5px 5px 10px rgb(107, 106, 106);
-        border: 1px solid rgb(151, 150, 150);
-        list-style: none;
-        text-align: center;
-        &:hover {
-          transform: scale(1.1);
-        }
-        .skillName {
-          font-size: 24px;
-          font-weight: 700;
-          color: var(--primary-color);
-        }
-        i {
-          font-size: 24px;
-          margin-right: 7px;
-        }
-      }
-    }
-
-    circle {
-      fill: none;
-      stroke: url(#grandientColor);
-      stroke-width: 20px;
-      stroke-dasharray: 472;
-      stroke-dashoffset: 472;
-    }
-
-    #myHtml .iconCode {
-      background: url("/wp-content/themes/novaneos/assets/images/html-5.webp")
-        no-repeat center / contain;
-    }
-
-    #myHtml circle {
-      animation: animHtml 2s linear forwards;
-    }
-
-    #myWordpress .iconCode {
-      background: url("/wp-content/themes/novaneos/assets/images/wordpress.webp")
-        no-repeat center / contain;
-    }
-
-    #myWordpress circle {
-      animation: animWp 2s linear forwards;
-    }
-
-    #myCss .iconCode {
-      background: url("/wp-content/themes/novaneos/assets/images/css-3.webp")
-        no-repeat center / contain;
-    }
-
-    #myCss circle {
-      animation: animCss 2s linear forwards;
-    }
-
-    #mySql .iconCode {
-      background: url("/wp-content/themes/novaneos/assets/images/sql-server.webp")
-        no-repeat center / contain;
-    }
-
-    #mySql circle {
-      animation: animSql 2s linear forwards;
-    }
-
-    #myJavascript .iconCode {
-      background: url("/wp-content/themes/novaneos/assets/images/js.webp")
-        no-repeat center / contain;
-    }
-
-    #myJavascript circle {
-      animation: animJs 2s linear forwards;
-    }
-
-    #myPhp .iconCode {
-      background: url("/wp-content/themes/novaneos/assets/images/php.webp")
-        no-repeat center / contain;
-    }
-
-    #myPhp circle {
-      animation: animPhp 2s linear forwards;
-    }
-  }
-
-  .titleMoveSkill {
-    position: absolute;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(182, 23, 23, 0.712);
-    font-size: clamp(1.5rem, 0.417rem + 4.34vw, 5.625rem);
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
-    top: 88vh;
-  }
-}
-
-@media (max-width: 1430px) {
-  #mySkills #skill {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .titleMoveSkill {
-    display: none;
-  }
-}
-
-@media (max-width: 1024px) {
-  #mySkills #skill {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-@media (max-width: 767px) {
-  #mySkills .skillBox {
-    padding: 0;
-  }
-}
-
-//3---------------------------
-
-#skillsLine {
-  display: flex;
-  background: url("/wp-content/themes/novaneos/assets/images/fondBlanc.webp")
-    no-repeat center / cover;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  position: relative;
-  padding: 50px 100px;
-  .skillsContainer {
-    padding: 10px;
-    position: relative;
-    width: 50%;
-    border-radius: 6px;
-    background: var(--primary-color);
-    .text-box {
-      padding: 20px 30px;
-      background: #fff;
-      position: relative;
-      border-radius: 6px;
-      font-size: 15px;
-      font-family: "Poppins", Arial, Helvetica, sans-serif;
-    }
-  }
-  .rightSide {
-    left: 50%;
-  }
-  .leftSide {
-    right: 0%;
-  }
-}
-
-@media (max-width: 767px) {
-  #heroHeader .hero .picture {
-    display: none;
-  }
-}
-
 //page publication site-----------------------------
+
