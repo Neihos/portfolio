@@ -27,7 +27,7 @@
           </a>
       </li>
       <li>      
-          <a href="<?php echo home_url(); ?>">
+          <a href="#portfolio">
             <i class="fa-solid fa-laptop-file"><p>Portfolio</p></i>
           </a>
       </li>
@@ -62,7 +62,7 @@
           </a>
         </li>
         <li>      
-          <a href="<?php echo home_url(); ?>">
+          <a href="#portfolio">
             <i class="fa-solid fa-laptop-file"><p>Portfolio</p></i>
           </a>
         </li>

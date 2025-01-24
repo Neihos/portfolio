@@ -145,5 +145,50 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     updateCirclePhp();
+
+  }
+});
+
+jQuery(document).ready(function ($) {
+
+  let currentPage = 1;
+
+  // -----> Action avec le bouton Charger plus <-----
+
+  $("#loadMoreSites").on("click", function () {
+    currentPage++; // Incrémentation de la page
+    loadSites(false); // Charge les sites sans réinitialiser le conteneur
+  });
+
+  function loadSites(resetContainer) {
+    $.ajax({
+      url: novaneos_js.ajax_url,
+      type: "POST",
+      data: {
+        action: "load_more_sites",
+        page: currentPage,
+        security: novaneos_js.nonce,
+      },
+      success: function (response) {
+        if (resetContainer) {
+          $(".mySites").html(
+            response == 0 ? "<p>fin du portfolio.</p>" : response
+          );
+        } else {
+          if (response == 0) {
+            // Pas plus de sites à charger
+            $("#loadMoreSites").prop("disabled", true).html("Fin du portfolio");
+          } else {
+            $(".mySites").append(response); // Ajoute les nouveaux sites à la liste existante
+          }
+        }
+        $(".mySites").removeClass("updating-content"); // Réaffiche le contenu
+      },
+      error: function () {
+        console.error(
+          "Une erreur s'est produite lors du chargement des sites."
+        );
+      },
+    });
   }
 });

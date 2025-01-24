@@ -1,5 +1,7 @@
 <?php
 
+// Inclure le fichier des fonctions API REST
+include get_template_directory() . '/include/ajax.php';
 
 // Enregistrement des styles CSS du thème avec filemtime pour contrôler le cache
 function novaneos_enqueue_styles() {
@@ -12,7 +14,6 @@ function novaneos_enqueue_scripts() {
     $scripts = [
         'novaneos-script-main' => 'scripts.js',
         'novaneos-script-menu' => 'menu.js',
-        'novaneos-script-modale' => 'modale.js',
         'novaneos-script-home' => 'home.js',
     ];
 

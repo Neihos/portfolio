@@ -9,6 +9,9 @@
  * @since novaneos 1.0
  */
 
+ // Inclure le fichier avec les données des sites
+include('template_parts/home_sites-preview.php');
+
 get_header(); 
 ?>
 
@@ -233,7 +236,22 @@ get_header();
         
     </section>
 
-    
+    <section id="portfolio">
+
+        <div class="portfolioTitle">
+            <h2>Mon portfolio</h2>
+        </div>
+
+        <div class="mySites">
+            <?php
+                $site_preview_display = siteDisplay_event();
+                echo $site_preview_display;
+            ?>
+        </div>
+        <div class="btnload">
+            <button id="loadMoreSites">Charger plus</button>
+        </div>
+    </section>
 
 
     
