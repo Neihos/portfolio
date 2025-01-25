@@ -1,3 +1,7 @@
+// =================================================================================================================
+//                                              Javascript de la page d'accueil
+// =================================================================================================================
+
 document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".main-container")) {
     /******* Animations des pourcentages des skills *******/
@@ -145,12 +149,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     updateCirclePhp();
-
   }
 });
 
 jQuery(document).ready(function ($) {
-
   let currentPage = 1;
 
   // -----> Action avec le bouton Charger plus <-----

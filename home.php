@@ -19,7 +19,7 @@ get_header();
   
 
     <header id="heroHeader">
-        <h2 class="titleMove" data-0="top: 4vh" data-800="top: 100vh">WordPress</h2>
+        <h2 class="titleMove" data-0="top: 4vh" data-800="top: 90vh">WordPress</h2>
         <div class="hero">
             <article class="textArea">
                 <div class="inTextArea">
@@ -253,7 +253,9 @@ get_header();
         </div>
     </section>
 
+    <section id="contact">
 
+    </section>
     
 </div>
 

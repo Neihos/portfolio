@@ -1,3 +1,7 @@
+// =================================================================================================================
+//                                              JavaScript du menu
+// =================================================================================================================
+
 const burgerIcon = document.querySelector(".burgerIcon");
 const crossIcon = document.querySelector(".crossIcon");
 const mobileContent = document.querySelector(".mobileContent");

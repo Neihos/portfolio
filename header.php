@@ -14,6 +14,7 @@
 </head>
     
 <header>
+
   <nav id="menuHeader">
     <ul>
       <li>  
@@ -22,17 +23,17 @@
           </a> 
       </li>
       <li>      
-          <a href="#mySkills" alt="profil">
+          <a href="<?php echo home_url(); ?>/#mySkills" alt="profil">
             <i class="fa-solid fa-user"><p>Skills</p></i>
           </a>
       </li>
       <li>      
-          <a href="#portfolio">
+          <a href="<?php echo home_url(); ?>/#portfolio">
             <i class="fa-solid fa-laptop-file"><p>Portfolio</p></i>
           </a>
       </li>
       <li>      
-          <a href="<?php echo home_url(); ?>">
+          <a href="<?php echo home_url(); ?>/#contact">
             <i class="fa-solid fa-envelopes-bulk"><p>Contact</p></i>
           </a>
       </li>
@@ -77,13 +78,9 @@
           </a>
         </li>
       </ul>
-    </section>
+    </section>    
     
-
-    
-    
-  </nav>
-    
+  </nav>    
   
 </header>
 

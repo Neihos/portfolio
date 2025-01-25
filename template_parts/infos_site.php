@@ -1,4 +1,8 @@
 <?php
+// =================================================================================================================
+//                                         Gestion du custom post site
+// =================================================================================================================
+
 // Récupérer le champ personnalisé 'photo principale' avec les vérifications
 $photo_principale = get_field('photo_principale');
 $image_url = null;

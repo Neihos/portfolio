@@ -1,3 +1,8 @@
+// =================================================================================================================
+//                                              CSS de la page principale
+// =================================================================================================================
+
+
 .main-container {
   max-width: 2560px;
 }
@@ -49,7 +54,7 @@
           text-align: center;
           opacity: 0;
           font-size: clamp(1.6rem, 1.171rem + 0.893vw, 2.6rem);
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: "Poppins", Arial, Helvetica, sans-serif;
           font-style: italic;
           font-weight: 600;
           letter-spacing: 2px;
@@ -115,27 +120,22 @@
   width: auto;
   min-height: 100vh;
   position: relative;
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.918),
-      rgba(0, 0, 0, 0.918)
-    ),
+  background: linear-gradient(rgba(0, 0, 0, 0.918), rgba(0, 0, 0, 0.918)),
     url("/wp-content/themes/novaneos/assets/images/codebg.webp") repeat center;
   background-size: 200px;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+  border-top: 1px solid var(--tertiary-color);
+  border-bottom: 1px solid var(--tertiary-color);
   .skillsTitle {
-    top: 50px;
     margin: 50px 0;
     font-size: clamp(1.5rem, 1.243rem + 1.098vw, 3rem);
     text-align: center;
-    font-family: "Lobster", Arial, Helvetica, sans-serif;
+    opacity: 0;
     font-style: italic;
     font-weight: 300;
     text-shadow: 1px 1px black;
     letter-spacing: 2px;
     color: var(--primary-color);
-    opacity: 0;
-    animation: reveal 2s 1s forwards;
+    animation: reveal 2s ease forwards;
   }
   .skillContainer {
     display: flex;
@@ -262,7 +262,7 @@
         animation: reveal2 0.5s ease-in-out;
       }
     }
-  
+
     circle {
       fill: none;
       stroke: url(#grandientColor);
@@ -335,6 +335,136 @@
     bottom: 0vh;
   }
 }
+
+// Réglages de la partie Portfolio
+
+#portfolio {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  background: url("/wp-content/themes/novaneos/assets/images/fondPreview.webp") repeat center;
+  .portfolioTitle {
+    margin: 50px 0;
+    font-size: clamp(1.5rem, 1.243rem + 1.098vw, 3rem);
+    text-align: center;
+    opacity: 0;
+    font-style: italic;
+    font-weight: 300;
+    text-shadow: 1px 1px black;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    animation: reveal 2s ease forwards;
+  }
+  .mySites {
+    display: flex;
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 25px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    justify-content: center;
+    margin-right: 105px;
+    margin-left: 15px;
+  }
+  h3 {
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 30px;
+    color: var(--tertiary-color);
+    background-color: rgba(0, 0, 0, 0.849);
+    border: 1px solid var(--tertiary-color);
+    border-radius: 8px;
+    text-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color),
+      0 0 50px var(--primary-color), 0 0 200px var(--primary-color);
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    &:hover {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color),
+        0 0 50px var(--primary-color), 0 0 200px var(--primary-color);
+      -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    }
+  }
+  .btnload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    #loadMoreSites {
+      max-width: 272px;
+      width: 100%;
+      height: 50px;
+      color: var(--tertiary-color);
+      font-size: 24px;
+      border-radius: 2px;
+      border: 1px solid ;
+      text-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color),
+        0 0 50px var(--primary-color);
+      -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+      background: rgba(0, 0, 0, 1);
+      transition: background-color 0.3s ease, transform 0.3s ease,
+        box-shadow 0.3s ease;
+      cursor: pointer;
+      &:hover {
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        box-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color),
+          0 0 50px var(--primary-color), 0 0 200px var(--primary-color);
+        -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+      }
+    }
+  }
+}
+
+.container-preview {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 20px 0;
+  .site-preview {
+    position: relative;
+    aspect-ratio: 255 / 369;
+    width: 80%;
+    height: auto;
+    .imgTablette {
+      width: 100%;
+      height: auto;
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+    .imgInTablette {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -51%);
+      z-index: 2;
+      width: 90%;
+      height: 82%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+      }
+    }
+  }
+}
+
 
 @media (max-width: 1430px) {
   #mySkills #skill {

@@ -39,7 +39,7 @@ function novaneos_enqueue_scripts() {
     // Localisation de l'URL AJAX et de l'URL REST après l'enregistrement des scripts
     wp_localize_script('novaneos-script-main', 'novaneos_js', array(
         'ajax_url' => admin_url('admin-ajax.php'),
-        'rest_url' => esc_url(rest_url('wp/v2/')), // Ajout de l'URL de l'API REST de photo
+        'rest_url' => esc_url(rest_url('wp/v2/')), // Ajout de l'URL de l'API REST
         'nonce'    => wp_create_nonce('novaneos-script-main'),        
     ));
 }
