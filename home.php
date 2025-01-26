@@ -254,7 +254,22 @@ get_header();
     </section>
 
     <section id="contact">
-
+        <div class="contactTitle">
+            <h2>Contact</h2>
+        </div>
+        <div class="imgContact">
+                <img src="/wp-content/themes/novaneos/assets/images/contactHuman.webp" alt="illustration de contact">
+            </div> 
+        <div class="contactContainer">               
+        <?php 
+            // Affiche le formulaire Contact Form 7 avec l'ID ou le titre
+            echo do_shortcode('[contact-form-7 id="ae4031d" title="Contact form"]'); 
+        ?>
+        <div class="idContact">
+            <div class="myMail-phone"><i class="fa-solid fa-envelopes-bulk"></i><p>contact@novaneos.fr</p></div>
+            <div class="myMail-phone"><i class="fa-solid fa-phone"></i><p>07/62/06/05/94</p></div>
+        </div>
+    </div>
     </section>
     
 </div>

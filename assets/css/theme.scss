@@ -53,8 +53,105 @@ body {
 // Partie contact
 
 #contact {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  background: url("/wp-content/themes/novaneos/assets/images/testContact.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 1px solid var(--tertiary-color);
+  .contactTitle {
+    margin: 50px 0;
+    font-size: clamp(1.5rem, 1.243rem + 1.098vw, 3rem);
+    text-align: center;
+    opacity: 0;
+    font-style: italic;
+    font-weight: 300;
+    text-shadow: 1px 1px black;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    animation: reveal 2s ease forwards;
+  }
+  .imgContact {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contactContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    gap: 50px;
+    #wpcf7-f85-o1 {
+      width: 405px;
+      font-size: 24px;
+      text-align: center;
+      input {
+        width: 400px;
+        height: 34px;
+        text-align: center;
+      }
+      .wpcf7-not-valid-tip {
+        font-size: 24px;
+      }
+      .wpcf7-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--tertiary-color);
+      }
+      .wpcf7-textarea {
+        width: 400px;
+      }
+      .wpcf7-submit {
+        max-width: 272px;
+        width: 100%;
+        height: 50px;
+        color: var(--tertiary-color);
+        margin-top: 50px;
+        font-size: 24px;
+        border-radius: 2px;
+        border: 1px solid;
+        text-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color),
+          0 0 50px var(--primary-color);
+        -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+        background: rgba(0, 0, 0, 1);
+        transition: background-color 0.3s ease, transform 0.3s ease,
+          box-shadow 0.3s ease;
+        cursor: pointer;
+        &:hover {
+          background: var(--primary-color);
+          color: white;
+          border: none;
+          box-shadow: 0 0 5px var(--primary-color),
+            0 0 25px var(--primary-color), 0 0 50px var(--primary-color),
+            0 0 200px var(--primary-color);
+          -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+        }
+      }
+    }
+    .idContact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      height: 100%;
+      color: var(--tertiary-color);
+      gap: 10px;
+      .myMail-phone {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        gap: 10px;
+        .fa-envelopes-bulk {
+          color: var(--tertiary-color);
+        }
+      }
+    }
+  }
 }
-
 

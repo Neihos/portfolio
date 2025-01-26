@@ -458,6 +458,7 @@
   justify-content: space-evenly;
   align-items: center;
   position: relative;
+  padding-bottom: 50px;
   background: url("/wp-content/themes/novaneos/assets/images/fondPreview.webp") repeat center;
 }
 #portfolio .portfolioTitle {
@@ -1047,6 +1048,100 @@ body {
 }
 
 #contact {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  background: url("/wp-content/themes/novaneos/assets/images/testContact.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 1px solid var(--tertiary-color);
+}
+#contact .contactTitle {
+  margin: 50px 0;
+  font-size: clamp(1.5rem, 1.243rem + 1.098vw, 3rem);
+  text-align: center;
+  opacity: 0;
+  font-style: italic;
+  font-weight: 300;
+  text-shadow: 1px 1px black;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+  animation: reveal 2s ease forwards;
+}
+#contact .imgContact {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact .contactContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  gap: 50px;
+}
+#contact .contactContainer #wpcf7-f85-o1 {
+  width: 405px;
+  font-size: 24px;
+  text-align: center;
+}
+#contact .contactContainer #wpcf7-f85-o1 input {
+  width: 400px;
+  height: 34px;
+  text-align: center;
+}
+#contact .contactContainer #wpcf7-f85-o1 .wpcf7-not-valid-tip {
+  font-size: 24px;
+}
+#contact .contactContainer #wpcf7-f85-o1 .wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--tertiary-color);
+}
+#contact .contactContainer #wpcf7-f85-o1 .wpcf7-textarea {
+  width: 400px;
+}
+#contact .contactContainer #wpcf7-f85-o1 .wpcf7-submit {
+  max-width: 272px;
+  width: 100%;
+  height: 50px;
+  color: var(--tertiary-color);
+  margin-top: 50px;
+  font-size: 24px;
+  border-radius: 2px;
+  border: 1px solid;
+  text-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color), 0 0 50px var(--primary-color);
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
+  background: rgb(0, 0, 0);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+#contact .contactContainer #wpcf7-f85-o1 .wpcf7-submit:hover {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  box-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color), 0 0 50px var(--primary-color), 0 0 200px var(--primary-color);
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
+}
+#contact .contactContainer .idContact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+  color: var(--tertiary-color);
+  gap: 10px;
+}
+#contact .contactContainer .idContact .myMail-phone {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  gap: 10px;
+}
+#contact .contactContainer .idContact .myMail-phone .fa-envelopes-bulk {
+  color: var(--tertiary-color);
 }/*# sourceMappingURL=theme.css.map */
