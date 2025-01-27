@@ -50,7 +50,7 @@ get_header();
                         <div class="iconCode"></div>                    
                         <div class="skillContent">                
                             <div class="inner">
-                                <div id="number"></div>
+                                <div id="number">0</div>
                                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
                                     width="160px" height="160px">
                                     <defs>
@@ -64,16 +64,16 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <<div class="details">>
-                        <div class="nameSkill">
+                    <details class="details">
+                        <summary class="nameSkill">
                             <span class="skillName">HTML</span>
                             <br>
                             <span><i class="fa-regular fa-hand-pointer"></i>Ici pour en savoir plus</span>
-                        </div>
+                        </summary>
                         <div class="description">
                             <p>En utilisant les bonnes pratiques du HTML, je développe des structures web claires et sémantiques, qui sont optimisées pour le référencement et l'accessibilité. Je suis en mesure de répondre de manière efficace aux exigences des projets tout en renforçant en permanence mes compétences.</p>
                         </div>
-                    </div>
+                    </details>
                 </div>
 
                 <div id="myCss">
@@ -81,7 +81,7 @@ get_header();
                         <div class="iconCode"></div>
                         <div class="skillContent">
                             <div class="inner">
-                                <div id="number"></div>
+                                <div id="number">0</div>
                                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
                                     width="160px" height="160px">
                                     <defs>
@@ -95,16 +95,16 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <<div class="details">>
-                        <div class="nameSkill">
+                    <details class="details">
+                        <summary class="nameSkill">
                             <span class="skillName">CSS</span>
                             <br>
                             <span><i class="fa-regular fa-hand-pointer"></i>Ici pour en savoir plus</span>
-                        </div>
+                        </summary>
                         <div class="description">
                             <p>Je crée des mises en page dynamiques et élégantes, qui conviennent à tous les écrans, en utilisant les méthodes les plus efficaces du CSS. Je possède une expertise dans les techniques avancées telles que le flexbox, le grid et les animations afin de concevoir des interfaces modernes et dynamiques.</p>
                         </div>
-                    </div>
+                    </details>
                 </div>
 
                 <div id="myJavascript">
@@ -112,7 +112,7 @@ get_header();
                         <div class="iconCode"></div>
                         <div class="skillContent">
                             <div class="inner">
-                                <div id="number"></div>
+                                <div id="number">0</div>
                                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
                                     width="160px" height="160px">
                                     <defs>
@@ -126,16 +126,16 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <<div class="details">>
-                        <div class="nameSkill">
+                    <details class="details">
+                        <summary class="nameSkill">
                             <span class="skillName">JavaScript</span>
                             <br>
                             <span><i class="fa-regular fa-hand-pointer"></i>Ici pour en savoir plus</span>
-                        </div>
+                        </summary>
                         <div class="description">
                             <p>En utilisant JavaScript, je développe des interactions dynamiques et des fonctionnalités avancées, ce qui permet d'améliorer l'expérience utilisateur. Je suis capable de maîtriser le DOM de manière efficace, de gérer les événements et d'intégrer des solutions performantes, tout en poursuivant ma progression dans les nouvelles technologies.</p>
                         </div>
-                    </div>
+                    </details>
                 </div>
 
             <div id="myWordpress">
@@ -143,7 +143,7 @@ get_header();
                         <div class="iconCode"></div>
                         <div class="skillContent">
                             <div class="inner">
-                                <div id="number"></div>
+                                <div id="number">0</div>
                                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
                                     width="160px" height="160px">
                                     <defs>
@@ -157,16 +157,16 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <div class="details">
-                        <div class="nameSkill">
+                    <details class="details">
+                        <summary class="nameSkill">
                             <span class="skillName">WordPress</span>
                             <br>
                             <span><i class="fa-regular fa-hand-pointer"></i>Ici pour en savoir plus</span>
-                        </div>
+                        </summary>
                         <div class="description">
                             <p>En utilisant WordPress, je crée des sites web performants, personnalisés et respectant le SEO, en adaptant des thèmes et en intégrant des fonctionnalités avancées. Je suis capable de créer des templates, d’interagir avec les hooks et d’ajouter des fonctionnalités spécifiques selon les besoins d’un projet.</p>
                         </div>
-                    </div>
+                    </details>
                 </div>
                 
                 <div id="myPhp">
@@ -174,7 +174,7 @@ get_header();
                         <div class="iconCode"></div>
                         <div class="skillContent">
                             <div class="inner">
-                                <div id="number"></div>
+                                <div id="number">0</div>
                                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
                                     width="160px" height="160px">
                                     <defs>
@@ -188,16 +188,16 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <div class="details">
-                        <div class="nameSkill">
+                    <details class="details">
+                        <summary class="nameSkill">
                             <span class="skillName">PHP</span>
                             <br>
                             <span><i class="fa-regular fa-hand-pointer"></i>Ici pour en savoir plus</span>
-                        </div>
+                        </summary>
                         <div class="description">
                             <p>Ma compétence en PHP me permet de concevoir des pages dynamiques et de créer des scripts qui répondent aux exigences d'un projet. Je maîtrise le langage de manière efficace afin de structurer et automatiser les fonctionnalités dans différents environnements.</p>
                         </div>
-                    </div>
+                    </details>
                 </div>
 
                 <div id="mySql">
@@ -205,7 +205,7 @@ get_header();
                         <div class="iconCode"></div>
                         <div class="skillContent">
                             <div class="inner">
-                                <div id="number"></div>
+                                <div id="number">0</div>
                                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
                                     width="160px" height="160px">
                                     <defs>
@@ -219,16 +219,16 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <div class="details">
-                        <div class="nameSkill">
+                    <details class="details">
+                        <summary class="nameSkill">
                             <span class="skillName">MySQL</span>
                             <br>
                             <span><i class="fa-regular fa-hand-pointer"></i>Ici pour en savoir plus</span>
-                        </div>
+                        </summary>
                         <div class="description">
                             <p>Je crée des bases de données SQL, les sauvegarde et les importe en utilisant les commandes de base. Je suis capable de gérer de manière efficace des données simples tout en poursuivant mon développement pour des tâches plus complexes.</p>
                         </div>
-                    </div> 
+                    </details> 
                 </div>
             </div>
             <h2 class="titleMoveSkill" data-1400="left: 85vw" data-2000="left: 1vw">Skills</h2>
@@ -254,6 +254,7 @@ get_header();
     </section>
 
     <section id="contact">
+
         <div class="contactTitle">
             <h2>Contact</h2>
         </div>
@@ -265,11 +266,7 @@ get_header();
             // Affiche le formulaire Contact Form 7 avec l'ID ou le titre
             echo do_shortcode('[contact-form-7 id="ae4031d" title="Contact form"]'); 
         ?>
-        <div class="idContact">
-            <div class="myMail-phone"><i class="fa-solid fa-envelopes-bulk"></i><p>contact@novaneos.fr</p></div>
-            <div class="myMail-phone"><i class="fa-solid fa-phone"></i><p>07/62/06/05/94</p></div>
-        </div>
-    </div>
+    
     </section>
     
 </div>

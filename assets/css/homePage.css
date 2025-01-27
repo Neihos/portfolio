@@ -1,5 +1,6 @@
 .main-container {
   max-width: 2560px;
+  overflow: hidden;
 }
 
 #heroHeader {
@@ -63,7 +64,7 @@
 #heroHeader .hero .picture {
   display: flex;
   justify-content: flex-start;
-  width: 33%;
+  padding-right: 50px;
   min-width: 350px;
 }
 #heroHeader .hero .picture .photo {
@@ -115,7 +116,7 @@
   border-bottom: 1px solid var(--tertiary-color);
 }
 #mySkills .skillsTitle {
-  margin: 50px 0;
+  margin: 50px;
   font-size: clamp(1.5rem, 1.243rem + 1.098vw, 3rem);
   text-align: center;
   opacity: 0;
@@ -184,7 +185,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 370px;
+  width: 320px;
   margin: 0 1vw;
   height: auto;
   max-width: 500px;
@@ -212,7 +213,7 @@
 #mySkills #skill #myJavascript p,
 #mySkills #skill #myPhp p {
   width: 100%;
-  height: 230px;
+  height: 250px;
   background: var(--secondary-color);
   color: white;
   box-shadow: 5px 5px 10px rgb(107, 106, 106);
@@ -271,37 +272,37 @@
 #mySkills #skill #myHtml .iconCode {
   background: url("/wp-content/themes/novaneos/assets/images/html-5.webp") no-repeat center/contain;
 }
-#mySkills #skill #myHtml circle {
+#mySkills #skill #myHtml circle.load {
   animation: animHtml 2s linear forwards;
 }
 #mySkills #skill #myWordpress .iconCode {
   background: url("/wp-content/themes/novaneos/assets/images/wordpress.webp") no-repeat center/contain;
 }
-#mySkills #skill #myWordpress circle {
+#mySkills #skill #myWordpress circle.load {
   animation: animWp 2s linear forwards;
 }
 #mySkills #skill #myCss .iconCode {
   background: url("/wp-content/themes/novaneos/assets/images/css-3.webp") no-repeat center/contain;
 }
-#mySkills #skill #myCss circle {
+#mySkills #skill #myCss circle.load {
   animation: animCss 2s linear forwards;
 }
 #mySkills #skill #mySql .iconCode {
   background: url("/wp-content/themes/novaneos/assets/images/mysql.webp") no-repeat center/contain;
 }
-#mySkills #skill #mySql circle {
+#mySkills #skill #mySql circle.load {
   animation: animSql 2s linear forwards;
 }
 #mySkills #skill #myJavascript .iconCode {
   background: url("/wp-content/themes/novaneos/assets/images/js.webp") no-repeat center/contain;
 }
-#mySkills #skill #myJavascript circle {
+#mySkills #skill #myJavascript circle.load {
   animation: animJs 2s linear forwards;
 }
 #mySkills #skill #myPhp .iconCode {
   background: url("/wp-content/themes/novaneos/assets/images/php.webp") no-repeat center/contain;
 }
-#mySkills #skill #myPhp circle {
+#mySkills #skill #myPhp circle.load {
   animation: animPhp 2s linear forwards;
 }
 #mySkills .titleMoveSkill {
@@ -325,7 +326,7 @@
   background: url("/wp-content/themes/novaneos/assets/images/fondPreview.webp") repeat center;
 }
 #portfolio .portfolioTitle {
-  margin: 50px 0;
+  margin: 50px;
   font-size: clamp(1.5rem, 1.243rem + 1.098vw, 3rem);
   text-align: center;
   opacity: 0;
@@ -344,15 +345,55 @@
   flex-wrap: wrap;
   margin-bottom: 50px;
   justify-content: center;
-  margin-right: 105px;
-  margin-left: 15px;
+  margin-right: 125px;
+  margin-left: 50px;
+}
+#portfolio .mySites .container-preview {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 20px 0;
+}
+#portfolio .mySites .container-preview .site-preview {
+  position: relative;
+  aspect-ratio: 255/369;
+  width: 80%;
+  height: auto;
+}
+#portfolio .mySites .container-preview .site-preview .imgTablette {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+#portfolio .mySites .container-preview .site-preview .imgInTablette {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -51%);
+  z-index: 2;
+  width: 90%;
+  height: 82%;
+}
+#portfolio .mySites .container-preview .site-preview .imgInTablette img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
 }
 #portfolio h3 {
   width: 80%;
   margin-bottom: 20px;
   padding: 5px 0;
   text-align: center;
-  font-size: 30px;
+  font-size: clamp(0.875rem, 0.42rem + 2.273vw, 1.875rem);
   color: var(--tertiary-color);
   background-color: rgba(0, 0, 0, 0.849);
   border: 1px solid var(--tertiary-color);
@@ -397,47 +438,130 @@
   -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
 }
 
-.container-preview {
+#contact {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  width: 50%;
-  height: auto;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 15px;
+  border-top: 1px solid var(--tertiary-color);
+}
+#contact .contactTitle {
+  margin: 50px 0;
+  font-size: clamp(1.5rem, 1.243rem + 1.098vw, 3rem);
+  text-align: center;
+  opacity: 0;
+  font-style: italic;
+  font-weight: 300;
+  text-shadow: 1px 1px black;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+  animation: reveal 2s ease forwards;
+}
+#contact .imgContact {
+  width: auto;
+  display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
-  margin: 20px 0;
+  padding-right: 105px;
 }
-.container-preview .site-preview {
-  position: relative;
-  aspect-ratio: 255/369;
-  width: 80%;
-  height: auto;
-}
-.container-preview .site-preview .imgTablette {
+#contact .imgContact img {
   width: 100%;
-  height: auto;
-  display: block;
-  position: relative;
-  z-index: 1;
 }
-.container-preview .site-preview .imgInTablette {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -51%);
-  z-index: 2;
-  width: 90%;
-  height: 82%;
+#contact .contactContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding-right: 105px;
+  gap: 50px;
 }
-.container-preview .site-preview .imgInTablette img {
+#contact .contactContainer #wpcf7-f85-o1 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 50px;
+}
+#contact .contactContainer #wpcf7-f85-o1 input {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top center;
-     object-position: top center;
+  height: 34px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+#contact .contactContainer #wpcf7-f85-o1 .wpcf7-not-valid-tip {
+  font-size: 24px;
+}
+#contact .contactContainer #wpcf7-f85-o1 .wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--tertiary-color);
+}
+#contact .contactContainer #wpcf7-f85-o1 .wpcf7-textarea {
+  width: 100%;
+}
+#contact .contactContainer #wpcf7-f85-o1 .wpcf7-submit {
+  max-width: 340px;
+  width: 100%;
+  height: 50px;
+  color: var(--tertiary-color);
+  margin-top: 50px;
+  font-size: 24px;
+  border-radius: 2px;
+  border: 1px solid;
+  margin-bottom: 50px;
+  text-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color), 0 0 50px var(--primary-color);
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
+  background: rgb(0, 0, 0);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+#contact .contactContainer #wpcf7-f85-o1 .wpcf7-submit:hover {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  box-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color), 0 0 50px var(--primary-color), 0 0 200px var(--primary-color);
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
+}
+#contact .contactContainer #wpcf7-f85-o1 .nameAdress {
+  display: flex;
+  gap: 20px;
+}
+#contact .contactContainer #wpcf7-f85-o1 p {
+  width: 100%;
+}
+#contact .contactContainer #wpcf7-f85-o1 p .wpcf7-textarea {
+  border-radius: 16px;
+  margin: 10px 0;
+}
+#contact .contactContainer #wpcf7-f85-o1 .wpcf7-spinner {
+  display: none;
 }
 
+@media (max-width: 1024px) {
+  .contactContainer {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .contactContainer .idContact {
+    margin-bottom: 50px;
+  }
+  .contactContainer .nameAdress {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  #contact .contactContainer {
+    padding-right: 0;
+    margin-top: 30px;
+  }
+  #contact .imgContact {
+    padding-right: 0;
+  }
+}
 @media (max-width: 1430px) {
   #mySkills #skill {
     grid-template-columns: repeat(2, 1fr);
@@ -450,9 +574,16 @@
   #mySkills #skill {
     grid-template-columns: repeat(1, 1fr);
   }
+  #mySkills #skill .details .description {
+    display: block;
+  }
 }
 @media (max-width: 767px) {
   #mySkills .skillBox {
     padding: 0;
+  }
+  #portfolio .mySites {
+    margin-right: 0;
+    margin-left: 0;
   }
 }/*# sourceMappingURL=homePage.css.map */

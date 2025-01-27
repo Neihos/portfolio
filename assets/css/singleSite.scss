@@ -5,6 +5,7 @@
 .single-container {
   color: white;
   position: relative;
+  overflow-x: hidden;
   &::after {
     content: "";
     position: absolute;
@@ -53,6 +54,7 @@
     animation: fallDown 1s forwards;
     height: 15vh;
     max-width: 70vw;
+    margin-bottom: 50px;
   }
   .single-content {
     display: flex;
@@ -302,7 +304,12 @@
       gap: 20px;
     }
   }
-
+  .preview-site {
+    padding-right: 15px;
+  }
+  .sliderContainer {
+    margin-right: 50px;
+  }
   .computerContainer {
     order: -1;
   }

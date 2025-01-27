@@ -1,0 +1,124 @@
+#mobileNav {
+  display: none;
+}
+
+#menuHeader {
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+}
+#menuHeader ul {
+  display: flex;
+  width: 100px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 10px;
+}
+#menuHeader ul li {
+  list-style: none;
+}
+#menuHeader ul li a {
+  text-decoration: none;
+}
+#menuHeader ul li a i {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  background-color: rgb(206, 16, 16);
+  border-radius: 30px;
+  margin: 15px;
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s ease;
+}
+#menuHeader ul li a i p {
+  text-shadow: 0 0 20px #000000, 0 0 40px #000000;
+  display: none;
+}
+#menuHeader ul li a i:hover {
+  width: 250px;
+}
+#menuHeader ul li a i:hover p {
+  display: inline;
+  text-align: center;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  width: 75%;
+  animation: reveal 0.5s ease forwards;
+}
+
+@media (max-width: 767px) {
+  #menuHeader {
+    display: none;
+  }
+  #mobileNav {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 98;
+  }
+  #mobileNav .burgerIcon,
+  #mobileNav .crossIcon {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 99;
+  }
+  #mobileNav .mobileContent {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 98;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: url("/wp-content/themes/novaneos//assets/images/fondPreview.webp") repeat center;
+  }
+  #mobileNav .mobileContent ul li {
+    list-style: none;
+  }
+  #mobileNav .mobileContent ul li a {
+    text-decoration: none;
+  }
+  #mobileNav .mobileContent ul li a i {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    background-color: rgb(206, 16, 16);
+    border-radius: 30px;
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
+    height: 60px;
+  }
+  #mobileNav .mobileContent ul li a i:hover {
+    color: rgb(255, 255, 255);
+    background-color: black;
+  }
+  #mobileNav .mobileContent ul li a i p {
+    width: 100%;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 10px;
+  }
+  #mobileNav .mobileContent.open {
+    display: flex;
+  }
+}/*# sourceMappingURL=header-footer.css.map */

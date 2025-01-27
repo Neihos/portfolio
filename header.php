@@ -18,12 +18,12 @@
   <nav id="menuHeader">
     <ul>
       <li>  
-          <a href="<?php echo home_url(); ?>" alt="Acceuil">
+          <a href="<?php echo home_url(); ?>">
             <i class="fa-solid fa-house-chimney"><p>Acceuil</p></i>
           </a> 
       </li>
       <li>      
-          <a href="<?php echo home_url(); ?>/#mySkills" alt="profil">
+          <a href="<?php echo home_url(); ?>/#mySkills">
             <i class="fa-solid fa-user"><p>Skills</p></i>
           </a>
       </li>
@@ -38,8 +38,8 @@
           </a>
       </li>
       <li>      
-          <a href="<?php echo home_url(); ?>">
-            <i class="fa-brands fa-microblog"><p>Blog</p></i>
+          <a href="https://github.com/neihos">
+            <i class="fa-brands fa-github"><p>GitHub</p></i>
           </a>
       </li>
     </ul>
@@ -53,28 +53,28 @@
     <section class="mobileContent">
       <ul>
         <li>  
-          <a href="<?php echo home_url(); ?>" alt="Acceuil">
+          <a href="<?php echo home_url(); ?>">
             <i class="fa-solid fa-house-chimney"><p>Accueil</p></i>
           </a> 
         </li>  
           <li>      
-           <a href="#mySkills" alt="profil">
+           <a href="<?php echo home_url(); ?>/#mySkills">
             <i class="fa-solid fa-user"><p>Skills</p></i>
           </a>
         </li>
         <li>      
-          <a href="#portfolio">
+          <a href="<?php echo home_url(); ?>/#portfolio">
             <i class="fa-solid fa-laptop-file"><p>Portfolio</p></i>
           </a>
         </li>
         <li>      
-          <a href="<?php echo home_url(); ?>">
+          <a href="<?php echo home_url(); ?>/#contact">
             <i class="fa-solid fa-envelopes-bulk"><p>Contact</p></i>
           </a>
         </li>
         <li>      
-          <a href="<?php echo home_url(); ?>">
-            <i class="fa-brands fa-microblog"><p>Blog</p></i>
+          <a href="https://github.com/neihos">
+            <i class="fa-brands fa-github"><p>GitHub</p></i>
           </a>
         </li>
       </ul>

@@ -5,9 +5,12 @@
 /******* Chargement de la bibliothéque Skrollr *******/
 
 document.addEventListener("DOMContentLoaded", function () {
-  if (typeof skrollr !== "undefined") {
+  // Vérifier si on est sur un appareil mobile
+  var isMobile = /Android|iPhone|iPad|iPod|Windows Phone|webOS/i.test(
+    navigator.userAgent
+  );
+
+  if (!isMobile && typeof skrollr !== "undefined") {
     var s = skrollr.init();
-  } else {
-    console.error("Skrollr n'est pas chargé.");
   }
 });

@@ -1,0 +1,94 @@
+@keyframes translationX {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes translation-X {
+  0% {
+    transform: translateX(-1000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fallDown {
+  0% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes reveal {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes animHtml {
+  100% {
+    stroke-dashoffset: 80;
+  }
+}
+@keyframes animWp {
+  100% {
+    stroke-dashoffset: 100;
+  }
+}
+@keyframes animCss {
+  100% {
+    stroke-dashoffset: 140;
+  }
+}
+@keyframes animSql {
+  100% {
+    stroke-dashoffset: 270;
+  }
+}
+@keyframes animJs {
+  100% {
+    stroke-dashoffset: 220;
+  }
+}
+@keyframes animPhp {
+  100% {
+    stroke-dashoffset: 242;
+  }
+}
+@keyframes reveal2 {
+  0% {
+    transform: translateY(-250px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=animations.css.map */
