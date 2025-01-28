@@ -20,9 +20,9 @@ function novaneos_enqueue_scripts() {
     foreach ($scripts as $handle => $file) {
         wp_enqueue_script(
             $handle,
-            get_template_directory_uri() . './js/' . $file,
+            get_template_directory_uri() . '/js/' . $file,
             array('jquery'), // Dépendances
-            filemtime(get_template_directory() . './js/' . $file), // Gestion du cache
+            filemtime(get_template_directory() . '/js/' . $file), // Gestion du cache
             true // Chargement en pied de page
         );
     }

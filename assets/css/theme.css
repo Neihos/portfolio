@@ -678,27 +678,6 @@
   display: none;
 }
 
-@media (max-width: 1024px) {
-  .contactContainer {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .contactContainer .idContact {
-    margin-bottom: 50px;
-  }
-  .contactContainer .nameAdress {
-    flex-direction: column;
-  }
-}
-@media (max-width: 767px) {
-  #contact .contactContainer {
-    padding-right: 0;
-    margin-top: 30px;
-  }
-  #contact .imgContact {
-    padding-right: 0;
-  }
-}
 @media (max-width: 1430px) {
   #mySkills #skill {
     grid-template-columns: repeat(2, 1fr);
@@ -714,6 +693,16 @@
   #mySkills #skill .details .description {
     display: block;
   }
+  .contactContainer {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .contactContainer .idContact {
+    margin-bottom: 50px;
+  }
+  .contactContainer .nameAdress {
+    flex-direction: column;
+  }
 }
 @media (max-width: 767px) {
   #mySkills .skillBox {
@@ -722,6 +711,13 @@
   #portfolio .mySites {
     margin-right: 0;
     margin-left: 0;
+  }
+  #contact .contactContainer {
+    padding-right: 0;
+    margin-top: 30px;
+  }
+  #contact .imgContact {
+    padding-right: 0;
   }
 }
 #mobileNav {
@@ -1171,7 +1167,6 @@
   background-color: var(--primary-color);
 }
 
-/* Firefox Scrollbar */
 html {
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color) rgba(206, 16, 16, 0.26);

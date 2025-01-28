@@ -17,7 +17,7 @@ get_header();
 
 <div class="main-container">
   
-
+    <!-- Accueil Section -->
     <header id="heroHeader">
         <h2 class="titleMove" data-0="top: 4vh" data-800="top: 90vh">WordPress</h2>
         <div class="hero">
@@ -35,16 +35,18 @@ get_header();
         </div>   
     </header>
 
+    <!-- Skills Section -->
     <section id="mySkills">
 
-        <div class="skillsTitle">
+        <header class="skillsTitle">
             <h2>Mes Super-pouvoirs</h2>
-        </div>
+        </header>
 
         <div class="skillContainer">
 
             <div id="skill">
 
+                <!-- Carte Compétence : HTML -->
                 <div id="myHtml">
                     <div class="skillBox">
                         <div class="iconCode"></div>                    
@@ -76,6 +78,7 @@ get_header();
                     </details>
                 </div>
 
+                <!-- Carte Compétence : CSS -->
                 <div id="myCss">
                     <div class="skillBox">
                         <div class="iconCode"></div>
@@ -107,6 +110,7 @@ get_header();
                     </details>
                 </div>
 
+                <!-- Carte Compétence : JavaScript -->
                 <div id="myJavascript">
                     <div class="skillBox">
                         <div class="iconCode"></div>
@@ -138,6 +142,7 @@ get_header();
                     </details>
                 </div>
 
+            <!-- Carte Compétence : WordPress -->
             <div id="myWordpress">
                     <div class="skillBox">
                         <div class="iconCode"></div>
@@ -169,6 +174,7 @@ get_header();
                     </details>
                 </div>
                 
+                <!-- Carte Compétence : PHP -->
                 <div id="myPhp">
                     <div class="skillBox">
                         <div class="iconCode"></div>
@@ -200,6 +206,7 @@ get_header();
                     </details>
                 </div>
 
+                <!-- Carte Compétence : SQL -->
                 <div id="mySql">
                     <div class="skillBox">
                         <div class="iconCode"></div>
@@ -236,11 +243,12 @@ get_header();
         
     </section>
 
+    <!-- Portfolio Section -->
     <section id="portfolio">
 
-        <div class="portfolioTitle">
+        <header class="portfolioTitle">
             <h2>Mon portfolio</h2>
-        </div>
+        </header>
 
         <div class="mySites">
             <?php
@@ -253,11 +261,12 @@ get_header();
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
 
-        <div class="contactTitle">
+        <header class="contactTitle">
             <h2>Contact</h2>
-        </div>
+        </header>
         <div class="imgContact">
                 <img src="/wp-content/themes/novaneos/assets/images/contactHuman.webp" alt="illustration de contact">
             </div> 
