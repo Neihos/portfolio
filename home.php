@@ -35,6 +35,33 @@ get_header();
         </div>   
     </header>
 
+    <!-- about Me Section -->
+    <section id="aboutMe">
+        <header class="aboutMeTitle">
+            <h2>Qui suis-je ?</h2>
+        </header>
+        <div class="presentation">
+            <pre>
+Bonjour à tous !
+
+Je m'appelle Nathanael Detourbe, développeur web autodidacte passionné par la création d'expériences numériques innovantes.
+
+Au fil des années, j'ai perfectionné mes compétences dans des technologies clés telles que JavaScript, PHP, HTML, CSS, jQuery, et WordPress, tout en développant une solide base en SQL pour la gestion des bases de données. Mon apprentissage s'est construit sur une combinaison d'autoformation et de projets pratiques, qui m'ont permis d'acquérir des compétences techniques et une approche méthodique du développement.
+
+Pour approfondir mes connaissances et m'adapter aux exigences professionnelles, j'ai suivi une formation complète avec OpenClassrooms. Ce parcours m'a permis de :
+
+-Acquérir des compétences avancées en développement front-end et gestion de projet,
+-Travailler dans des conditions professionnelles, en respectant des délais et des attentes réelles,
+-Collaborer efficacement en équipe et présenter mes projets à des professionnels du secteur.
+
+Cette expérience m'a conduit à l'obtention d'un diplôme reconnu par l'État, validé par des projets concrets et des évaluations rigoureuses.
+
+Aujourd'hui, je suis déterminé à transformer ma passion en une carrière enrichissante. Avec ma créativité, mon sens du détail et mon expertise, je suis prêt à vous accompagner dans la conception et la réalisation de vos projets web.
+            </pre>
+        </div>
+    </section>
+
+
     <!-- Skills Section -->
     <section id="mySkills">
 
@@ -238,7 +265,7 @@ get_header();
                     </details> 
                 </div>
             </div>
-            <h2 class="titleMoveSkill" data-1400="left: 85vw" data-2000="left: 1vw">Skills</h2>
+            <h2 class="titleMoveSkill" data-2800="left: 85vw" data-3400="left: 1vw">Skills</h2>
         </div>
         
     </section>

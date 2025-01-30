@@ -49,3 +49,46 @@ body {
 .hiddenNow {
   display: none;
 }
+
+// about me
+
+#aboutMe {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  border-top: 1px solid var(--tertiary-color);
+  background: url("/wp-content/themes/novaneos/assets/images/fondFire.webp");
+  background-size: 80%;
+  .aboutMeTitle {
+    margin: 25px 50px;
+    font-size: clamp(1.5rem, 1.243rem + 1.098vw, 3rem);
+    text-align: center;
+    opacity: 0;
+    font-style: italic;
+    font-weight: 300;
+    text-shadow: 1px 1px black;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    animation: reveal 2s ease forwards;
+  }
+  .presentation {
+    display: block;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    max-width: 1200px;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.596);
+    padding: 30px;
+    margin: 70px;
+    margin-right: 105px;
+    border: 1px solid var(--tertiary-color);
+    border-radius: 8px;
+    pre {
+      white-space: pre-wrap;
+    }
+  }
+}

@@ -23,8 +23,13 @@
           </a> 
       </li>
       <li>      
+          <a href="<?php echo home_url(); ?>/#aboutMe">
+            <i class="fa-solid fa-user"><p>Qui suis-je ?</p></i>
+          </a>
+      </li>
+      <li>      
           <a href="<?php echo home_url(); ?>/#mySkills">
-            <i class="fa-solid fa-user"><p>Skills</p></i>
+            <i class="fa-solid fa-toolbox"><p>Skills</p></i>
           </a>
       </li>
       <li>      
