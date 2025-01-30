@@ -149,7 +149,7 @@
 #heroHeader .titleMove {
   position: absolute;
   color: transparent;
-  -webkit-text-stroke: 1px var(--primary-color);
+  -webkit-text-stroke: 1px var(--tertiary-color);
   font-size: clamp(1.5rem, 0.417rem + 4.34vw, 5.625rem);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   left: 20px;
@@ -445,7 +445,7 @@
 #mySkills .titleMoveSkill {
   position: absolute;
   color: transparent;
-  -webkit-text-stroke: 1px var(--primary-color);
+  -webkit-text-stroke: 1px var(--tertiary-color);
   font-size: clamp(1.5rem, 0.417rem + 4.34vw, 5.625rem);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   bottom: 0vh;
@@ -535,7 +535,6 @@
   background-color: rgba(0, 0, 0, 0.849);
   border: 1px solid var(--tertiary-color);
   border-radius: 8px;
-  text-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color), 0 0 50px var(--primary-color), 0 0 200px var(--primary-color);
   -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
 }
 #portfolio h3:hover {
@@ -561,7 +560,6 @@
   font-size: 24px;
   border-radius: 2px;
   border: 1px solid;
-  text-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color), 0 0 50px var(--primary-color);
   -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
   background: rgb(0, 0, 0);
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -584,8 +582,7 @@
   align-items: center;
   padding: 0 15px;
   border-top: 1px solid var(--tertiary-color);
-  background: url("/wp-content/themes/novaneos/assets/images/fondFire.webp");
-  background-size: 90%;
+  background: url("/wp-content/themes/novaneos/assets/images/fondContact.webp") no-repeat center/cover;
 }
 #contact .contactTitle {
   margin: 50px 0;
@@ -604,7 +601,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 105px;
 }
 #contact .imgContact img {
   width: 100%;
@@ -614,7 +610,6 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding-right: 105px;
   gap: 50px;
 }
 #contact .contactContainer #wpcf7-f85-o1 {
@@ -648,11 +643,10 @@
   height: 50px;
   color: var(--tertiary-color);
   margin-top: 50px;
-  font-size: 24px;
+  font-size: clamp(1.125rem, 1.064rem + 0.273vw, 1.5rem);
   border-radius: 2px;
   border: 1px solid;
   margin-bottom: 50px;
-  text-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color), 0 0 50px var(--primary-color);
   -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
   background: rgb(0, 0, 0);
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -758,7 +752,7 @@
   align-items: center;
   color: rgb(255, 255, 255);
   font-size: 25px;
-  background-color: rgb(206, 16, 16);
+  background-color: var(--tertiary-color);
   border-radius: 30px;
   margin: 15px;
   width: 60px;
@@ -857,18 +851,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("/wp-content/themes/novaneos/assets/images/fondSingle.webp") repeat;
+  background: url("/wp-content/themes/novaneos/assets/images/damierBleu.webp") repeat;
   z-index: -2;
-}
-.single-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.842);
-  z-index: -1;
 }
 
 .preview-site {
@@ -1153,9 +1137,9 @@
   }
 }
 :root {
-  --primary-color: rgb(206, 16, 16);
+  --primary-color: rgb(31, 186, 224);
   --secondary-color: rgb(19, 18, 18);
-  --tertiary-color: rgb(255, 0, 0);
+  --tertiary-color: rgb(4, 0, 255);
 }
 
 ::-webkit-scrollbar-track {
@@ -1190,35 +1174,88 @@ body {
   width: 100%;
   height: 100vh;
   border-top: 1px solid var(--tertiary-color);
-  background: url("/wp-content/themes/novaneos/assets/images/fondFire.webp");
+  background: url("/wp-content/themes/novaneos/assets/images/damierBleu.webp");
   background-size: 80%;
 }
-#aboutMe .aboutMeTitle {
-  margin: 25px 50px;
-  font-size: clamp(1.5rem, 1.243rem + 1.098vw, 3rem);
+#aboutMe .book {
+  position: relative;
+  aspect-ratio: 280/350;
+  width: min(64vh, 70vw);
+  max-width: 100vw;
+  border-radius: 10px;
+  background-color: #effffe;
+  box-shadow: 1px 1px 12px var(--primary-color);
+  transform-style: preserve-3d;
+  perspective: 2000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
   text-align: center;
-  opacity: 0;
-  font-style: italic;
-  font-weight: 300;
-  text-shadow: 1px 1px black;
-  letter-spacing: 2px;
-  color: var(--primary-color);
-  animation: reveal 2s ease forwards;
-}
-#aboutMe .presentation {
-  display: block;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
-  font-size: 22px;
-  max-width: 1200px;
-  color: white;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.596);
-  padding: 30px;
-  margin: 70px;
   margin-right: 105px;
-  border: 1px solid var(--tertiary-color);
-  border-radius: 8px;
+  margin-left: 25px;
 }
-#aboutMe .presentation pre {
+#aboutMe .book:hover .cover, #aboutMe .book:focus-within .cover {
+  transition: all 0.5s;
+  transform: rotateY(-80deg);
+}
+#aboutMe .book .cover {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("/wp-content/themes/novaneos/assets/images/bookCover.webp") no-repeat left/cover;
+  transform-origin: 0;
+  border: 1px solid grey;
+  border-left: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+#aboutMe .book .cover p {
+  font-size: clamp(1rem, 0.877rem + 0.545vw, 1.75rem);
+  letter-spacing: 1px;
+}
+#aboutMe .book .cover .bookTitle {
+  font-size: clamp(1.125rem, 1.023rem + 0.455vw, 1.75rem);
+  text-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color), 0 0 50px var(--primary-color);
+}
+#aboutMe .book .cover h2 span {
+  color: var(--tertiary-color);
+  font-size: clamp(1.125rem, 1.023rem + 0.455vw, 1.75rem);
+  font-weight: bolder;
+}
+#aboutMe .book .content {
+  width: 100%;
+  height: 100%;
+  padding-left: 25px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  background: url("/wp-content/themes/novaneos/assets/images/papierVieilli.webp") no-repeat center/cover;
+}
+#aboutMe .book .content pre {
+  width: 100%;
+  max-height: 100%;
+  overflow: auto;
   white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: left;
+  font-size: clamp(0.875rem, 0.691rem + 0.818vw, 2rem);
+  line-height: 1;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  #aboutMe .book {
+    margin-right: 25px;
+  }
 }/*# sourceMappingURL=theme.css.map */

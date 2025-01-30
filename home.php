@@ -37,28 +37,24 @@ get_header();
 
     <!-- about Me Section -->
     <section id="aboutMe">
-        <header class="aboutMeTitle">
-            <h2>Qui suis-je ?</h2>
-        </header>
-        <div class="presentation">
-            <pre>
-Bonjour à tous !
+        <div class="book" tabindex="0">
+            <div class="cover">
+                <h2 class="bookTitle"><span>Nathanael</span><br>Qui suis-je ?</h2>
+                <p class="bookTitle">Ouvrez-moi !!</p>                
+                <p>@Neihos</p>
+            </div>
+            <div class="content">
+                <pre>Bonjour à tous !
 
-Je m'appelle Nathanael Detourbe, développeur web autodidacte passionné par la création d'expériences numériques innovantes.
+Je suis Nathanael Detourbe, développeur web autodidacte passionné par les expériences numériques innovantes.
 
-Au fil des années, j'ai perfectionné mes compétences dans des technologies clés telles que JavaScript, PHP, HTML, CSS, jQuery, et WordPress, tout en développant une solide base en SQL pour la gestion des bases de données. Mon apprentissage s'est construit sur une combinaison d'autoformation et de projets pratiques, qui m'ont permis d'acquérir des compétences techniques et une approche méthodique du développement.
+Ma maîtrise de JavaScript, PHP, HTML, CSS, jQuery et WordPress s’appuie sur des années d’autoformation et de projets concrets, renforcée par une solide base en SQL. Pour affiner mes compétences, j’ai suivi une formation complète chez OpenClassrooms, validée par un diplôme reconnu.
 
-Pour approfondir mes connaissances et m'adapter aux exigences professionnelles, j'ai suivi une formation complète avec OpenClassrooms. Ce parcours m'a permis de :
-
--Acquérir des compétences avancées en développement front-end et gestion de projet,
--Travailler dans des conditions professionnelles, en respectant des délais et des attentes réelles,
--Collaborer efficacement en équipe et présenter mes projets à des professionnels du secteur.
-
-Cette expérience m'a conduit à l'obtention d'un diplôme reconnu par l'État, validé par des projets concrets et des évaluations rigoureuses.
-
-Aujourd'hui, je suis déterminé à transformer ma passion en une carrière enrichissante. Avec ma créativité, mon sens du détail et mon expertise, je suis prêt à vous accompagner dans la conception et la réalisation de vos projets web.
-            </pre>
+Créatif, rigoureux et orienté solution, je suis prêt à concevoir et réaliser vos projets web avec professionnalisme.</pre>
+                
+            </div>
         </div>
+        
     </section>
 
 

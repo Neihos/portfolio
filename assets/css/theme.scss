@@ -20,9 +20,9 @@
 @import "singleSite";
 
 :root {
-  --primary-color: rgb(206, 16, 16);
+  --primary-color: rgb(31, 186, 224);
   --secondary-color: rgb(19, 18, 18);
-  --tertiary-color: rgb(255, 0, 0);
+  --tertiary-color: rgb(4, 0, 255);
 }
 
 ::-webkit-scrollbar-track {
@@ -60,35 +60,92 @@ body {
   width: 100%;
   height: 100vh;
   border-top: 1px solid var(--tertiary-color);
-  background: url("/wp-content/themes/novaneos/assets/images/fondFire.webp");
+  background: url("/wp-content/themes/novaneos/assets/images/damierBleu.webp");
   background-size: 80%;
-  .aboutMeTitle {
-    margin: 25px 50px;
-    font-size: clamp(1.5rem, 1.243rem + 1.098vw, 3rem);
+  .book {
+    position: relative;
+    aspect-ratio: 280 / 350;
+    width: min(80vh * (280 / 350), 70vw);
+    max-width: 100vw;
+    border-radius: 10px;
+    background-color: #effffe;
+    box-shadow: 1px 1px 12px var(--primary-color);
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
     text-align: center;
-    opacity: 0;
-    font-style: italic;
-    font-weight: 300;
-    text-shadow: 1px 1px black;
-    letter-spacing: 2px;
-    color: var(--primary-color);
-    animation: reveal 2s ease forwards;
-  }
-  .presentation {
-    display: block;
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
-    font-size: 22px;
-    max-width: 1200px;
-    color: white;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.596);
-    padding: 30px;
-    margin: 70px;
     margin-right: 105px;
-    border: 1px solid var(--tertiary-color);
-    border-radius: 8px;
-    pre {
-      white-space: pre-wrap;
+    margin-left: 25px;
+    &:hover .cover,
+    &:focus-within .cover {
+      transition: all 0.5s;
+      transform: rotateY(-80deg);
     }
+    .cover {
+      top: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url("/wp-content/themes/novaneos/assets/images/bookCover.webp")
+        no-repeat left / cover;
+      transform-origin: 0;
+      border: 1px solid grey;
+      border-left: none;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transition: all 0.5s;
+      cursor: pointer;
+      p {
+        font-size: clamp(1rem, 0.877rem + 0.545vw, 1.75rem);
+        letter-spacing: 1px;
+      }
+      .bookTitle {
+        font-size: clamp(1.125rem, 1.023rem + 0.455vw, 1.75rem);
+        text-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color),
+          0 0 50px var(--primary-color);
+      }
+      h2 span {
+        color: var(--tertiary-color);
+        font-size: clamp(1.125rem, 1.023rem + 0.455vw, 1.75rem);
+        font-weight: bolder;
+      }
+    }
+    .content {
+      width: 100%;
+      height: 100%;
+      padding-left: 25px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 10px;
+      background: url("/wp-content/themes/novaneos/assets/images/papierVieilli.webp")
+        no-repeat center / cover;
+      pre {
+        width: 100%;
+        max-height: 100%;
+        overflow: auto;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: left;
+        font-size: clamp(0.875rem, 0.691rem + 0.818vw, 2rem);
+        line-height: 1;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #aboutMe .book {
+    margin-right: 25px;
   }
 }
