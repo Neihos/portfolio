@@ -2,6 +2,8 @@
 //                                              Les animations du sites ( keyframes, mixin, etc )
 // =================================================================================================================
 
+//-----> Gére l'opacité <-----
+
 @mixin opa {
   from {
     opacity: 0;
@@ -20,6 +22,8 @@
   }
 }
 
+//-----> translation plus importante en X avec opacité <-----
+
 @keyframes translation-X {
   0% {
     transform: translateX(-1000px);
@@ -28,7 +32,9 @@
     transform: translateX(0px);
   }
   @include opa;
-} 
+}
+
+//-----> translation en Y avec opacité <-----
 
 @keyframes fallDown {
   0% {
@@ -40,6 +46,20 @@
   @include opa;
 }
 
+//-----> translation alternative en Y avec opacité <-----
+
+@keyframes fallDown2 {
+  0% {
+    transform: translateY(-250px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+  @include opa;
+}
+
+//-----> effet de zoom avec opacité <-----
+
 @keyframes reveal {
   0% {
     transform: scale(0);
@@ -47,8 +67,10 @@
   100% {
     transform: scale(1);
   }
-  @include opa
+  @include opa;
 }
+
+//-----> Animations des cercles de la partie skills <-----
 
 @keyframes animHtml {
   100% {
@@ -85,14 +107,3 @@
     stroke-dashoffset: 242;
   }
 }
-
-@keyframes reveal2 {
-  0% {
-    transform: translateY(-250px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-  @include opa
-}
-

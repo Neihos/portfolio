@@ -47,5 +47,6 @@ function novaneos_enqueue_scripts() {
 // Actions pour charger les styles, scripts et menus
 add_action('wp_enqueue_scripts', 'novaneos_enqueue_styles');
 add_action('wp_enqueue_scripts', 'novaneos_enqueue_scripts');
-
+// Autoriser les mises à jours
+add_filter('automatic_updates_is_vcs_checkout', '__return_false');
 ?>

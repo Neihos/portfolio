@@ -12,6 +12,9 @@
  // Inclure le fichier avec les données des sites
 include('template_parts/home_sites-preview.php');
 
+ // Inclure le fichier avec les données des médias ( photos,...)
+include('template_parts/medias_parts.php');
+
 get_header(); 
 ?>
 
@@ -19,7 +22,10 @@ get_header();
   
     <!-- Accueil Section -->
     <header id="heroHeader">
-        <h2 class="titleMove" data-0="top: 4vh" data-800="top: 90vh">WordPress</h2>
+        <picture>
+            <?php echo get_image_html(89); ?>
+        </picture>
+        <p class="titleMove" data-0="top: 4vh" data-800="top: 90vh">WordPress</p>
         <div class="hero">
             <article class="textArea">
                 <div class="inTextArea">
@@ -29,7 +35,7 @@ get_header();
             </article>  
             <figure class="picture">
                 <div class="photo">
-                    <img src="/wp-content/themes/novaneos/assets/images/nathanaelDetourbe.webp" alt="nathanael detourbe">
+                    <?php echo get_image_html(91); ?>
                 </div>
             </figure>
         </div>   
@@ -37,13 +43,23 @@ get_header();
 
     <!-- about Me Section -->
     <section id="aboutMe">
+        <picture>
+            <?php echo get_image_html(90); ?>
+        </picture>
         <div class="book" tabindex="0">
-            <div class="cover">
-                <h2 class="bookTitle"><span>Nathanael</span><br>Qui suis-je ?</h2>
-                <p class="bookTitle">Ouvrez-moi !!</p>                
-                <p>@Neihos</p>
+            
+            <div class="cover" aria-hidden="true">
+                <picture>
+                    <?php echo get_image_html(92); ?>
+                </picture>
+                <p class="bookMiniTitle">Ouvrez-moi !!</p>
+                <h2 class="bookTitle">Qui suis-je ?</h2>                                
+                <p>Nathanael</p>
             </div>
             <div class="content">
+                <picture>
+                    <?php echo get_image_html(93); ?>
+                </picture>
                 <pre>Bonjour à tous !
 
 Je suis Nathanael Detourbe, développeur web autodidacte passionné par les expériences numériques innovantes.
@@ -230,7 +246,7 @@ Créatif, rigoureux et orienté solution, je suis prêt à concevoir et réalise
                 </div>
 
                 <!-- Carte Compétence : SQL -->
-                <div id="mySql">
+                <div id="sql">
                     <div class="skillBox">
                         <div class="iconCode"></div>
                         <div class="skillContent">
@@ -251,7 +267,7 @@ Créatif, rigoureux et orienté solution, je suis prêt à concevoir et réalise
                     </div>
                     <details class="details">
                         <summary class="nameSkill">
-                            <span class="skillName">MySQL</span>
+                            <span class="skillName">SQL</span>
                             <br>
                             <span><i class="fa-regular fa-hand-pointer"></i>Ici pour en savoir plus</span>
                         </summary>
@@ -261,7 +277,7 @@ Créatif, rigoureux et orienté solution, je suis prêt à concevoir et réalise
                     </details> 
                 </div>
             </div>
-            <h2 class="titleMoveSkill" data-2800="left: 85vw" data-3400="left: 1vw">Skills</h2>
+            <p class="titleMoveSkill" data-2800="left: 85vw" data-3400="left: 1vw">Skills</p>
         </div>
         
     </section>
@@ -287,11 +303,15 @@ Créatif, rigoureux et orienté solution, je suis prêt à concevoir et réalise
     <!-- Contact Section -->
     <section id="contact">
 
+        <picture>
+            <?php echo get_image_html(94); ?>
+        </picture>
+
         <header class="contactTitle">
             <h2>Contact</h2>
         </header>
         <div class="imgContact">
-                <img src="/wp-content/themes/novaneos/assets/images/contactHuman.webp" alt="illustration de contact">
+                <?php echo get_image_html(95); ?>
             </div> 
         <div class="contactContainer">               
         <?php 

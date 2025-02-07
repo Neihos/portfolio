@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#myHtml"),
         document.querySelector("#myWordpress"),
         document.querySelector("#myCss"),
-        document.querySelector("#mySql"),
+        document.querySelector("#sql"),
         document.querySelector("#myJavascript"),
         document.querySelector("#myPhp"),
       ];
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
               animateCounter(targetNumber, 85, 15);
             } else if (skillElement.id === "myCss") {
               animateCounter(targetNumber, 75, 17);
-            } else if (skillElement.id === "mySql") {
+            } else if (skillElement.id === "sql") {
               animateCounter(targetNumber, 45, 35);
             } else if (skillElement.id === "myJavascript") {
               animateCounter(targetNumber, 60, 25);

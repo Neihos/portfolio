@@ -15,7 +15,11 @@
 
 @import "homePage";
 
-@import "header-footer";
+@import "page";
+
+@import "header";
+
+@import "footer";
 
 @import "singleSite";
 
@@ -38,7 +42,7 @@
 // Firefox Scrollbar
 html {
   scrollbar-width: thin;
-  scrollbar-color: var(--primary-color) rgba(206, 16, 16, 0.26);
+  scrollbar-color: var(--primary-color) rgba(16, 35, 206, 0.26);
 }
 
 body {
@@ -50,102 +54,329 @@ body {
   display: none;
 }
 
-// about me
+// =================================================================================================================
+//                                              CSS de la page de présentaion des sites
+// =================================================================================================================
 
-#aboutMe {
+.single-container {
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/wp-content/themes/novaneos/assets/images/damierBleu.webp")
+      repeat;
+    background-size: 100%;
+    z-index: -2;
+  }
+}
+
+.preview-site {
+  padding-right: 105px;
+  .singleContent {
+    padding: 0 15px;
+    width: 100%;
+  }
+}
+
+.siteOnPage {
   display: flex;
-  justify-content: space-evenly;
+  width: 100%;
+  max-height: 100vh;
   align-items: center;
   flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  border-top: 1px solid var(--tertiary-color);
-  background: url("/wp-content/themes/novaneos/assets/images/damierBleu.webp");
-  background-size: 80%;
-  .book {
-    position: relative;
-    aspect-ratio: 280 / 350;
-    width: min(80vh * (280 / 350), 70vw);
-    max-width: 100vw;
-    border-radius: 10px;
-    background-color: #effffe;
-    box-shadow: 1px 1px 12px var(--primary-color);
-    transform-style: preserve-3d;
-    perspective: 2000px;
+  .post-title {
+    text-align: center;
+    opacity: 0;
+    font-size: clamp(3rem, 1.714rem + 2.679vw, 6rem);
+    font-family: "Lobster", Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    text-shadow: 1px 1px black;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    padding: 20px;
+    animation: fallDown 1s forwards;
+    max-width: 70vw;
+    margin-bottom: 50px;
+  }
+  .single-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #000;
-    text-align: center;
-    margin-right: 105px;
-    margin-left: 25px;
-    &:hover .cover,
-    &:focus-within .cover {
-      transition: all 0.5s;
-      transform: rotateY(-80deg);
-    }
-    .cover {
-      top: 0;
-      position: absolute;
+    aspect-ratio: 1908 / 900;
+    width: 100%;
+    max-width: 1500px;
+    max-height: 70vh;
+  }
+}
+
+// Réglages de la partie ordinateur
+
+.computerContainer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  .computerImg {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  .inComputer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%, -79%);
+    z-index: 2;
+    width: 79%;
+    height: 57%;
+    overflow: hidden;
+    border: 1px solid grey;
+    img {
       width: 100%;
       height: 100%;
-      background: url("/wp-content/themes/novaneos/assets/images/bookCover.webp")
-        no-repeat left / cover;
-      transform-origin: 0;
-      border: 1px solid grey;
-      border-left: none;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      transition: all 0.5s;
-      cursor: pointer;
-      p {
-        font-size: clamp(1rem, 0.877rem + 0.545vw, 1.75rem);
-        letter-spacing: 1px;
-      }
-      .bookTitle {
-        font-size: clamp(1.125rem, 1.023rem + 0.455vw, 1.75rem);
-        text-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color),
-          0 0 50px var(--primary-color);
-      }
-      h2 span {
-        color: var(--tertiary-color);
-        font-size: clamp(1.125rem, 1.023rem + 0.455vw, 1.75rem);
-        font-weight: bolder;
-      }
-    }
-    .content {
-      width: 100%;
-      height: 100%;
-      padding-left: 25px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      border-radius: 10px;
-      background: url("/wp-content/themes/novaneos/assets/images/papierVieilli.webp")
-        no-repeat center / cover;
-      pre {
-        width: 100%;
-        max-height: 100%;
-        overflow: auto;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-        padding: 20px;
-        border-radius: 5px;
-        text-align: left;
-        font-size: clamp(0.875rem, 0.691rem + 0.818vw, 2rem);
-        line-height: 1;
-        text-align: center;
-      }
+      object-fit: cover;
+      object-position: top center;
     }
   }
 }
 
+// Réglages de la partie tablette
+
+.tabletteContainer {
+  position: relative;
+  width: 50%;
+  height: auto;
+  overflow: hidden;
+  .tabletteImg {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  .inTablette {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -51%);
+    z-index: 2;
+    width: 90%;
+    height: 83%;
+    border: 1px solid grey;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+}
+
+// Réglages de la partie smartphone
+
+.smartphoneContainer {
+  position: relative;
+  width: 20%;
+  height: auto;
+  overflow: hidden;
+  .smartphoneImg {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  .inSmartphone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 87%;
+    height: 93%;
+    border-radius: clamp(0.313rem, 0.167rem + 0.677vw, 1.25rem);
+    overflow: hidden;
+    border: 1px solid grey;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+}
+
+// Partie info du site
+
+.infoSite {
+  display: flex;
+  max-width: 1024px;
+  margin: 50px auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  span {
+    opacity: 0;
+    font-size: 48px;
+    font-family: "Lobster", Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    text-shadow: 1px 1px black;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    padding: 20px 0;
+    animation: fallDown 1s forwards;
+  }
+  .description {
+    font-size: clamp(1rem, 0.558rem + 1.966vw, 1.5rem);
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(19, 18, 18, 0.863);
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    text-align: center;
+    box-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color),
+      0 0 25px var(--primary-color), 0 0 20px var(--primary-color);
+    margin: 50px;
+  }
+  .publication-year {
+    font-size: 24px;
+  }
+  .linkToSite {
+    font-size: 24px;
+    color: var(--primary-color);
+  }
+}
+
+// Partie slider
+
+.sliderContainer {
+  display: flex;
+  padding: 0 50px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.625rem, -1.586rem + 9.828vw, 3.125rem);
+  padding-bottom: 50px;
+  .fa-solid {
+    font-size: clamp(2.188rem, -4.621rem + 10.638vw, 4.688rem);
+    color: var(--primary-color);
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+// Réglages de l'écran vers le site précédent
+
+.changeSitePrevious {
+  display: flex;
+  position: relative;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  .ecranPrevious {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  .imgPrevious {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -62%);
+    z-index: 2;
+    width: 90%;
+    height: 70%;
+    overflow: hidden;
+    border: 2px solid grey;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+// Réglages de l'écran vers le site suivant
+
+.changeSiteNext {
+  display: flex;
+  position: relative;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  .ecranNext {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  .imgNext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -62%);
+    z-index: 2;
+    width: 90%;
+    height: 70%;
+    overflow: hidden;
+    border: 2px solid grey;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+.arrows a img {
+  width: 50px;
+}
+
+@media (max-width: 1024px) {
+  .siteOnPage {
+    max-height: none;
+    .single-content {
+      max-height: none;
+      padding: 0 40px;
+      flex-direction: column;
+      align-items: center;
+      aspect-ratio: auto;
+      gap: 20px;
+    }
+  }
+  .preview-site {
+    padding: 0 15px;
+  }
+  .sliderContainer {
+    margin-right: 50px;
+  }
+  .computerContainer {
+    order: -1;
+  }
+  .infoSite .description {
+    width: 95%;
+  }
+}
+
 @media (max-width: 767px) {
-  #aboutMe .book {
-    margin-right: 25px;
+  .sliderContainer {
+    padding: 0;
   }
 }

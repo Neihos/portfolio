@@ -25,6 +25,8 @@ if ( have_posts() ) :
 
     <article class="preview-site">
 
+    <div class="singleContent">
+
         <section class="siteOnPage">
             <h1 class="post-title"><?php the_title(); ?></h1>
             <div class="single-content"> 
@@ -84,6 +86,8 @@ if ( have_posts() ) :
                 </a>                 
             </div>
         </div>
+    
+    </div>
 
     </article>
     

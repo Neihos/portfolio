@@ -77,6 +77,20 @@
     opacity: 1;
   }
 }
+@keyframes fallDown2 {
+  0% {
+    transform: translateY(-250px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes reveal {
   0% {
     transform: scale(0);
@@ -121,37 +135,38 @@
     stroke-dashoffset: 242;
   }
 }
-@keyframes reveal2 {
-  0% {
-    transform: translateY(-250px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .main-container {
   max-width: 2560px;
   overflow: hidden;
 }
 
+.titleMove,
+.titleMoveSkill {
+  position: absolute;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--primary-color);
+  font-size: clamp(1.5rem, 0.417rem + 4.34vw, 5.625rem);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
 #heroHeader {
   display: flex;
-  background: url("/wp-content/themes/novaneos/assets/images/fondNoir.webp") no-repeat center/cover;
   position: relative;
   height: 100vh;
 }
-#heroHeader .titleMove {
+#heroHeader picture {
   position: absolute;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--tertiary-color);
-  font-size: clamp(1.5rem, 0.417rem + 4.34vw, 5.625rem);
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#heroHeader picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#heroHeader .titleMove {
   left: 20px;
 }
 #heroHeader .hero {
@@ -216,7 +231,7 @@
 #heroHeader .hero .picture .photo::before {
   content: "";
   position: absolute;
-  background-color: var(--secondary-color);
+  background-color: rgb(95, 95, 95);
   top: 0;
   left: 0;
   width: 100%;
@@ -234,23 +249,154 @@
   z-index: 1;
 }
 
-@media (max-width: 767px) {
-  #heroHeader .hero .picture {
-    display: none;
-  }
+#aboutMe {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  border-top: 1px solid var(--tertiary-color);
 }
+#aboutMe picture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -4;
+}
+#aboutMe picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#aboutMe .book {
+  position: relative;
+  aspect-ratio: 280/350;
+  width: min(64vh, 70vw);
+  max-width: 100vw;
+  border-radius: 10px;
+  background-color: #effffe;
+  box-shadow: 1px 1px 12px var(--primary-color);
+  transform-style: preserve-3d;
+  perspective: 2000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-align: center;
+  margin-right: 105px;
+  margin-left: 25px;
+}
+#aboutMe .book:hover .cover, #aboutMe .book:focus-within .cover {
+  transition: all 0.5s;
+  transform: rotateY(-80deg);
+}
+#aboutMe .book .cover {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: 0;
+  border: 1px solid grey;
+  border-left: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+#aboutMe .book .cover picture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#aboutMe .book .cover picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#aboutMe .book .cover .bookTitle,
+#aboutMe .book .cover .bookMiniTitle {
+  text-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color), 0 0 50px var(--primary-color);
+}
+#aboutMe .book .cover .bookMiniTitle {
+  padding-left: 5px;
+}
+#aboutMe .book .cover .bookTitle {
+  font-size: clamp(1.563rem, 0.546rem + 4.518vw, 3.438rem);
+  padding-left: 10px;
+  font-family: "Lobster";
+}
+#aboutMe .book .cover p {
+  font-size: clamp(1rem, 0.877rem + 0.545vw, 1.75rem);
+  letter-spacing: 1px;
+}
+#aboutMe .book .content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: -2;
+}
+#aboutMe .book .content picture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+}
+#aboutMe .book .content picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+#aboutMe .book .content pre {
+  width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: left;
+  font-size: clamp(0.875rem, 0.691rem + 0.818vw, 2rem);
+  line-height: 1;
+  text-align: center;
+}
+
 #mySkills {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
   width: auto;
   min-height: 100vh;
-  position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.918), rgba(0, 0, 0, 0.918)), url("/wp-content/themes/novaneos/assets/images/codebg.webp") repeat center;
   background-size: 200px;
   border-top: 1px solid var(--tertiary-color);
   border-bottom: 1px solid var(--tertiary-color);
+}
+#mySkills picture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#mySkills picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #mySkills .skillsTitle {
   margin: 50px;
@@ -291,8 +437,8 @@
   position: relative;
   margin-top: 10px;
   padding: 20px;
-  border: 1px solid rgb(146, 1, 1);
-  box-shadow: 6px 6px 10px -1px rgb(146, 1, 1);
+  border: 1px solid var(--tertiary-color);
+  box-shadow: 6px 6px 10px -1px var(--primary-color);
 }
 #mySkills #skill .skillBox .skillContent .inner {
   height: 120px;
@@ -300,9 +446,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgb(146, 1, 1);
+  border: 1px solid var(--tertiary-color);
   border-radius: 50%;
-  box-shadow: inset 4px 4px 6px -1px rgb(146, 1, 1);
+  box-shadow: inset 4px 4px 6px -1px var(--primary-color);
 }
 #mySkills #skill .skillBox .skillContent .inner #number {
   font-weight: 600;
@@ -315,7 +461,7 @@
 #mySkills #skill #myHtml,
 #mySkills #skill #myWordpress,
 #mySkills #skill #myCss,
-#mySkills #skill #mySql,
+#mySkills #skill #sql,
 #mySkills #skill #myJavascript,
 #mySkills #skill #myPhp {
   display: flex;
@@ -331,7 +477,7 @@
 #mySkills #skill #myHtml .iconCode,
 #mySkills #skill #myWordpress .iconCode,
 #mySkills #skill #myCss .iconCode,
-#mySkills #skill #mySql .iconCode,
+#mySkills #skill #sql .iconCode,
 #mySkills #skill #myJavascript .iconCode,
 #mySkills #skill #myPhp .iconCode {
   display: flex;
@@ -346,7 +492,7 @@
 #mySkills #skill #myHtml p,
 #mySkills #skill #myWordpress p,
 #mySkills #skill #myCss p,
-#mySkills #skill #mySql p,
+#mySkills #skill #sql p,
 #mySkills #skill #myJavascript p,
 #mySkills #skill #myPhp p {
   width: 100%;
@@ -397,7 +543,7 @@
 }
 #mySkills #skill .details:hover .description {
   display: block;
-  animation: reveal2 0.5s ease-in-out;
+  animation: fallDown2 0.5s ease-in-out;
 }
 #mySkills #skill circle {
   fill: none;
@@ -424,10 +570,10 @@
 #mySkills #skill #myCss circle.load {
   animation: animCss 2s linear forwards;
 }
-#mySkills #skill #mySql .iconCode {
-  background: url("/wp-content/themes/novaneos/assets/images/mysql.webp") no-repeat center/contain;
+#mySkills #skill #sql .iconCode {
+  background: url("/wp-content/themes/novaneos/assets/images/sql.webp") no-repeat center/contain;
 }
-#mySkills #skill #mySql circle.load {
+#mySkills #skill #sql circle.load {
   animation: animSql 2s linear forwards;
 }
 #mySkills #skill #myJavascript .iconCode {
@@ -443,11 +589,6 @@
   animation: animPhp 2s linear forwards;
 }
 #mySkills .titleMoveSkill {
-  position: absolute;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--tertiary-color);
-  font-size: clamp(1.5rem, 0.417rem + 4.34vw, 5.625rem);
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   bottom: 0vh;
 }
 
@@ -460,7 +601,8 @@
   align-items: center;
   position: relative;
   padding-bottom: 50px;
-  background: url("/wp-content/themes/novaneos/assets/images/fondPreview.webp") repeat center;
+  background: url("/wp-content/themes/novaneos/assets/images/damierBleu.webp") repeat center;
+  background-size: 100%;
 }
 #portfolio .portfolioTitle {
   margin: 50px;
@@ -575,6 +717,7 @@
 
 #contact {
   width: 100%;
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -582,7 +725,18 @@
   align-items: center;
   padding: 0 15px;
   border-top: 1px solid var(--tertiary-color);
-  background: url("/wp-content/themes/novaneos/assets/images/fondContact.webp") no-repeat center/cover;
+}
+#contact picture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#contact picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #contact .contactTitle {
   margin: 50px 0;
@@ -597,13 +751,15 @@
   animation: reveal 2s ease forwards;
 }
 #contact .imgContact {
-  width: auto;
+  width: 100%;
+  margin: 0 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #contact .imgContact img {
   width: 100%;
+  max-width: 700px;
 }
 #contact .contactContainer {
   display: flex;
@@ -683,8 +839,22 @@
   }
 }
 @media (max-width: 1024px) {
+  .titleMove,
+  .titleMoveSkill {
+    display: none;
+  }
+  #aboutMe .book {
+    margin: 0px;
+  }
   #mySkills #skill {
     grid-template-columns: repeat(1, 1fr);
+  }
+  #portfolio {
+    background-size: 200%;
+  }
+  #portfolio .mySites {
+    margin-right: 0;
+    margin-left: 0;
   }
   #mySkills #skill .details .description {
     display: block;
@@ -701,12 +871,18 @@
   }
 }
 @media (max-width: 767px) {
+  #heroHeader .hero .picture {
+    display: none;
+  }
   #mySkills .skillBox {
     padding: 0;
   }
-  #portfolio .mySites {
-    margin-right: 0;
-    margin-left: 0;
+  #portfolio .mySites .container-preview {
+    width: 100%;
+    margin: 20px;
+  }
+  .single-container .siteOnPage .single-content {
+    padding: 0;
   }
   #contact .contactContainer {
     padding-right: 0;
@@ -716,6 +892,124 @@
     padding-right: 0;
   }
 }
+.page-container {
+  width: 100%;
+  background: url("/wp-content/themes/novaneos/assets/images/fondPage.webp") repeat center;
+  background-size: 30%;
+}
+.page-container .page-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  background-color: rgba(0, 0, 0, 0.61);
+  color: var(--primary-color);
+}
+.page-container .page-content h1,
+.page-container .page-content h2,
+.page-container .page-content h3,
+.page-container .page-content h4,
+.page-container .page-content h5,
+.page-container .page-content h6 {
+  text-align: center;
+  font-weight: 600;
+  margin: 20px 0 10px;
+  color: var(--tertiary-color);
+}
+.page-container .page-content h1 {
+  font-size: 2em;
+}
+.page-container .page-content h2 {
+  font-size: 1.75em;
+}
+.page-container .page-content h3 {
+  font-size: 1.5em;
+}
+.page-container .page-content h4 {
+  font-size: 1.25em;
+}
+.page-container .page-content h5 {
+  font-size: 1.1em;
+}
+.page-container .page-content h6 {
+  font-size: 1em;
+}
+.page-container .page-content p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+.page-container .page-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.page-container .page-content blockquote {
+  border-left: 5px solid var(--tertiary-color);
+  padding: 10px 20px;
+  font-style: italic;
+  background: #f9f9f9;
+  margin: 20px 0;
+  color: var(--tertiary-color);
+}
+.page-container .page-content ul,
+.page-container .page-content ol {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+.page-container .page-content ul {
+  list-style-type: disc;
+}
+.page-container .page-content ol {
+  list-style-type: decimal;
+}
+.page-container .page-content li {
+  margin-bottom: 5px;
+}
+.page-container .page-content a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.page-container .page-content a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+.page-container .page-content .wp-block-button {
+  margin: 20px 0;
+}
+.page-container .page-content .wp-block-button .wp-block-button__link {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.page-container .page-content .wp-block-button .wp-block-button__link:hover {
+  background: var(--secondary-color);
+}
+.page-container .page-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+.page-container .page-content table th,
+.page-container .page-content table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+.page-container .page-content table th {
+  background: var(--primary-color);
+  color: white;
+}
+
 #mobileNav {
   display: none;
 }
@@ -735,7 +1029,6 @@
   display: flex;
   width: 100px;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: flex-end;
   padding-right: 10px;
 }
@@ -763,10 +1056,10 @@
   text-shadow: 0 0 20px #000000, 0 0 40px #000000;
   display: none;
 }
-#menuHeader ul li a i:hover {
+#menuHeader ul li a i:hover, #menuHeader ul li a i:focus {
   width: 250px;
 }
-#menuHeader ul li a i:hover p {
+#menuHeader ul li a i:hover p, #menuHeader ul li a i:focus p {
   display: inline;
   text-align: center;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -775,7 +1068,7 @@
   animation: reveal 0.5s ease forwards;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   #menuHeader {
     display: none;
   }
@@ -789,6 +1082,8 @@
   #mobileNav .burgerIcon,
   #mobileNav .crossIcon {
     position: absolute;
+    width: clamp(2.5rem, 2.161rem + 1.506vw, 3.125rem);
+    aspect-ratio: 1/1;
     top: 40px;
     right: 40px;
     z-index: 99;
@@ -803,7 +1098,8 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
-    background: url("/wp-content/themes/novaneos//assets/images/fondPreview.webp") repeat center;
+    background: url("/wp-content/themes/novaneos/assets/images/damierBleu.webp") repeat center;
+    background-size: 300%;
   }
   #mobileNav .mobileContent ul li {
     list-style: none;
@@ -813,11 +1109,11 @@
   }
   #mobileNav .mobileContent ul li a i {
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: rgb(255, 255, 255);
     font-size: 25px;
-    background-color: rgb(206, 16, 16);
+    background-color: var(--tertiary-color);
     border-radius: 30px;
     margin: 15px;
     padding: 20px;
@@ -839,6 +1135,61 @@
     display: flex;
   }
 }
+.footer {
+  color: var(--primary-color);
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+}
+.footer .footerContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer .footerContainer a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.footer .footerContainer .logoReseaux {
+  display: flex;
+  gap: clamp(0.625rem, 0.42rem + 0.909vw, 1.875rem);
+}
+.footer .footerContainer .logoReseaux a i {
+  font-size: 30px;
+}
+
+:root {
+  --primary-color: rgb(31, 186, 224);
+  --secondary-color: rgb(19, 18, 18);
+  --tertiary-color: rgb(4, 0, 255);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--primary-color);
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) rgba(16, 35, 206, 0.26);
+}
+
+body {
+  position: relative;
+  background-color: black;
+}
+
+.hiddenNow {
+  display: none;
+}
+
 .single-container {
   color: white;
   position: relative;
@@ -852,17 +1203,21 @@
   width: 100%;
   height: 100%;
   background: url("/wp-content/themes/novaneos/assets/images/damierBleu.webp") repeat;
+  background-size: 100%;
   z-index: -2;
 }
 
 .preview-site {
-  padding-left: 15px;
   padding-right: 105px;
+}
+.preview-site .singleContent {
+  padding: 0 15px;
+  width: 100%;
 }
 
 .siteOnPage {
   display: flex;
-  width: 99vw;
+  width: 100%;
   max-height: 100vh;
   align-items: center;
   flex-direction: column;
@@ -879,17 +1234,17 @@
   color: var(--primary-color);
   padding: 20px;
   animation: fallDown 1s forwards;
-  height: 15vh;
   max-width: 70vw;
   margin-bottom: 50px;
 }
 .siteOnPage .single-content {
   display: flex;
   align-items: center;
+  justify-content: center;
   aspect-ratio: 1908/900;
+  width: 100%;
+  max-width: 1500px;
   max-height: 70vh;
-  padding-left: 15px;
-  padding-right: 115px;
 }
 
 .computerContainer {
@@ -1014,9 +1369,14 @@
   animation: fallDown 1s forwards;
 }
 .infoSite .description {
-  font-size: 24px;
+  font-size: clamp(1rem, 0.558rem + 1.966vw, 1.5rem);
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgba(19, 18, 18, 0.863);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   text-align: center;
+  box-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color), 0 0 25px var(--primary-color), 0 0 20px var(--primary-color);
+  margin: 50px;
 }
 .infoSite .publication-year {
   font-size: 24px;
@@ -1028,15 +1388,15 @@
 
 .sliderContainer {
   display: flex;
-  margin: 0 auto;
+  padding: 0 50px;
   width: 100%;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: clamp(0.625rem, -1.586rem + 9.828vw, 3.125rem);
   padding-bottom: 50px;
 }
 .sliderContainer .fa-solid {
-  font-size: 35px;
+  font-size: clamp(2.188rem, -4.621rem + 10.638vw, 4.688rem);
   color: var(--primary-color);
 }
 .sliderContainer .fa-solid:hover {
@@ -1115,7 +1475,7 @@
   width: 50px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .siteOnPage {
     max-height: none;
   }
@@ -1123,11 +1483,12 @@
     max-height: none;
     padding: 0 40px;
     flex-direction: column;
+    align-items: center;
     aspect-ratio: auto;
     gap: 20px;
   }
   .preview-site {
-    padding-right: 15px;
+    padding: 0 15px;
   }
   .sliderContainer {
     margin-right: 50px;
@@ -1135,127 +1496,12 @@
   .computerContainer {
     order: -1;
   }
+  .infoSite .description {
+    width: 95%;
+  }
 }
-:root {
-  --primary-color: rgb(31, 186, 224);
-  --secondary-color: rgb(19, 18, 18);
-  --tertiary-color: rgb(4, 0, 255);
-}
-
-::-webkit-scrollbar-track {
-  border-radius: 3px;
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background-color: var(--primary-color);
-}
-
-html {
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary-color) rgba(206, 16, 16, 0.26);
-}
-
-body {
-  position: relative;
-  background-color: black;
-}
-
-.hiddenNow {
-  display: none;
-}
-
-#aboutMe {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  border-top: 1px solid var(--tertiary-color);
-  background: url("/wp-content/themes/novaneos/assets/images/damierBleu.webp");
-  background-size: 80%;
-}
-#aboutMe .book {
-  position: relative;
-  aspect-ratio: 280/350;
-  width: min(64vh, 70vw);
-  max-width: 100vw;
-  border-radius: 10px;
-  background-color: #effffe;
-  box-shadow: 1px 1px 12px var(--primary-color);
-  transform-style: preserve-3d;
-  perspective: 2000px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #000;
-  text-align: center;
-  margin-right: 105px;
-  margin-left: 25px;
-}
-#aboutMe .book:hover .cover, #aboutMe .book:focus-within .cover {
-  transition: all 0.5s;
-  transform: rotateY(-80deg);
-}
-#aboutMe .book .cover {
-  top: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url("/wp-content/themes/novaneos/assets/images/bookCover.webp") no-repeat left/cover;
-  transform-origin: 0;
-  border: 1px solid grey;
-  border-left: none;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  transition: all 0.5s;
-  cursor: pointer;
-}
-#aboutMe .book .cover p {
-  font-size: clamp(1rem, 0.877rem + 0.545vw, 1.75rem);
-  letter-spacing: 1px;
-}
-#aboutMe .book .cover .bookTitle {
-  font-size: clamp(1.125rem, 1.023rem + 0.455vw, 1.75rem);
-  text-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color), 0 0 50px var(--primary-color);
-}
-#aboutMe .book .cover h2 span {
-  color: var(--tertiary-color);
-  font-size: clamp(1.125rem, 1.023rem + 0.455vw, 1.75rem);
-  font-weight: bolder;
-}
-#aboutMe .book .content {
-  width: 100%;
-  height: 100%;
-  padding-left: 25px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 10px;
-  background: url("/wp-content/themes/novaneos/assets/images/papierVieilli.webp") no-repeat center/cover;
-}
-#aboutMe .book .content pre {
-  width: 100%;
-  max-height: 100%;
-  overflow: auto;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: left;
-  font-size: clamp(0.875rem, 0.691rem + 0.818vw, 2rem);
-  line-height: 1;
-  text-align: center;
-}
-
 @media (max-width: 767px) {
-  #aboutMe .book {
-    margin-right: 25px;
+  .sliderContainer {
+    padding: 0;
   }
 }/*# sourceMappingURL=theme.css.map */

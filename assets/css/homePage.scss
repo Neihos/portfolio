@@ -7,25 +7,46 @@
   overflow: hidden;
 }
 
+//-----> Les titres en mouvement <-----
+
+.titleMove,
+.titleMoveSkill {
+  position: absolute;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--primary-color);
+  font-size: clamp(1.5rem, 0.417rem + 4.34vw, 5.625rem);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
 // =================================================================================================================
 //                                              Première section ( Accueil )
 // =================================================================================================================
 
 #heroHeader {
   display: flex;
-  background: url("/wp-content/themes/novaneos/assets/images/fondNoir.webp")
-    no-repeat center / cover;
   position: relative;
   height: 100vh;
-  // Titre wordpress qui se déplace
-  .titleMove {
+  picture {
     position: absolute;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--tertiary-color);
-    font-size: clamp(1.5rem, 0.417rem + 4.34vw, 5.625rem);
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  //-----> Titre wordpress qui se déplace <-----
+
+  .titleMove {
     left: 20px;
   }
+
+  //-----> Ensemble de la section <-----
+
   .hero {
     display: flex;
     justify-content: space-around;
@@ -87,7 +108,7 @@
         &::before {
           content: "";
           position: absolute;
-          background-color: var(--secondary-color);
+          background-color: rgb(95, 95, 95);
           top: 0;
           left: 0;
           width: 100%;
@@ -109,27 +130,161 @@
   }
 }
 
-@media (max-width: 767px) {
-  #heroHeader .hero .picture {
-    display: none;
+// =================================================================================================================
+//                                              section qui suis je ?
+// =================================================================================================================
+
+#aboutMe {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  border-top: 1px solid var(--tertiary-color);
+  picture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -4;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .book {
+    position: relative;
+    aspect-ratio: 280 / 350;
+    width: min(80vh * (280 / 350), 70vw);
+    max-width: 100vw;
+    border-radius: 10px;
+    background-color: #effffe;
+    box-shadow: 1px 1px 12px var(--primary-color);
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    text-align: center;
+    margin-right: 105px;
+    margin-left: 25px;
+    &:hover .cover,
+    &:focus-within .cover {
+      transition: all 0.5s;
+      transform: rotateY(-80deg);
+    }
+    .cover {
+      top: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-origin: 0;
+      border: 1px solid grey;
+      border-left: none;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transition: all 0.5s;
+      picture {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      cursor: pointer;
+      .bookTitle,
+      .bookMiniTitle {
+        text-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color),
+          0 0 50px var(--primary-color);
+      }
+      .bookMiniTitle {
+        padding-left: 5px;
+      }
+      .bookTitle {
+        font-size: clamp(1.563rem, 0.546rem + 4.518vw, 3.438rem);
+        padding-left: 10px;
+        font-family: "Lobster";
+      }
+      p {
+        font-size: clamp(1rem, 0.877rem + 0.545vw, 1.75rem);
+        letter-spacing: 1px;
+      }
+    }
+    .content {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      z-index: -2;
+      picture {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -3;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+      pre {
+        width: 100%;
+        max-height: 100%;
+        overflow: auto;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: left;
+        font-size: clamp(0.875rem, 0.691rem + 0.818vw, 2rem);
+        line-height: 1;
+        text-align: center;
+      }
+    }
   }
 }
 
-// Réglage de la partie skills
+// =================================================================================================================
+//                                              section skills
+// =================================================================================================================
 
 #mySkills {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
   width: auto;
   min-height: 100vh;
-  position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.918), rgba(0, 0, 0, 0.918)),
     url("/wp-content/themes/novaneos/assets/images/codebg.webp") repeat center;
   background-size: 200px;
   border-top: 1px solid var(--tertiary-color);
   border-bottom: 1px solid var(--tertiary-color);
+  picture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
   .skillsTitle {
     margin: 50px;
     font-size: clamp(1.5rem, 1.243rem + 1.098vw, 3rem);
@@ -167,17 +322,17 @@
         position: relative;
         margin-top: 10px;
         padding: 20px;
-        border: 1px solid rgb(146, 1, 1);
-        box-shadow: 6px 6px 10px -1px rgb(146, 1, 1);
+        border: 1px solid var(--tertiary-color);
+        box-shadow: 6px 6px 10px -1px var(--primary-color);
         .inner {
           height: 120px;
           width: 120px;
           display: flex;
           align-items: center;
           justify-content: center;
-          border: 1px solid rgb(146, 1, 1);
+          border: 1px solid var(--tertiary-color);
           border-radius: 50%;
-          box-shadow: inset 4px 4px 6px -1px rgb(146, 1, 1);
+          box-shadow: inset 4px 4px 6px -1px var(--primary-color);
           #number {
             font-weight: 600;
             font-size: 24px;
@@ -192,7 +347,7 @@
     #myHtml,
     #myWordpress,
     #myCss,
-    #mySql,
+    #sql,
     #myJavascript,
     #myPhp {
       display: flex;
@@ -264,7 +419,7 @@
       }
       &:hover .description {
         display: block;
-        animation: reveal2 0.5s ease-in-out;
+        animation: fallDown2 0.5s ease-in-out;
       }
     }
 
@@ -303,12 +458,12 @@
       animation: animCss 2s linear forwards;
     }
 
-    #mySql .iconCode {
-      background: url("/wp-content/themes/novaneos/assets/images/mysql.webp")
+    #sql .iconCode {
+      background: url("/wp-content/themes/novaneos/assets/images/sql.webp")
         no-repeat center / contain;
     }
 
-    #mySql circle.load {
+    #sql circle.load {
       animation: animSql 2s linear forwards;
     }
 
@@ -330,18 +485,16 @@
       animation: animPhp 2s linear forwards;
     }
   }
+  //-----> Titre qui translate <-----
 
   .titleMoveSkill {
-    position: absolute;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--tertiary-color);
-    font-size: clamp(1.5rem, 0.417rem + 4.34vw, 5.625rem);
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
     bottom: 0vh;
   }
 }
 
-// Réglages de la partie Portfolio
+// =================================================================================================================
+//                                              section portfolio
+// =================================================================================================================
 
 #portfolio {
   display: flex;
@@ -352,8 +505,9 @@
   align-items: center;
   position: relative;
   padding-bottom: 50px;
-  background: url("/wp-content/themes/novaneos/assets/images/fondPreview.webp")
+  background: url("/wp-content/themes/novaneos/assets/images/damierBleu.webp")
     repeat center;
+  background-size: 100%;
   .portfolioTitle {
     margin: 50px;
     font-size: clamp(1.5rem, 1.243rem + 1.098vw, 3rem);
@@ -467,10 +621,13 @@
   }
 }
 
-// Partie contact
+// =================================================================================================================
+//                                              section contact
+// =================================================================================================================
 
 #contact {
   width: 100%;
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -478,7 +635,17 @@
   align-items: center;
   padding: 0 15px;
   border-top: 1px solid var(--tertiary-color);
-  background: url("/wp-content/themes/novaneos/assets/images/fondContact.webp") no-repeat center / cover;
+  picture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
   .contactTitle {
     margin: 50px 0;
     font-size: clamp(1.5rem, 1.243rem + 1.098vw, 3rem);
@@ -492,16 +659,18 @@
     animation: reveal 2s ease forwards;
   }
   .imgContact {
-    width: auto;
+    width: 100%;
+    margin: 0 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     img {
       width: 100%;
+      max-width: 700px;
     }
   }
 
-  // Formulaire de contact
+  //-----> Formulaire de contact <-----
 
   .contactContainer {
     display: flex;
@@ -576,6 +745,10 @@
   }
 }
 
+// =================================================================================================================
+//                                              Gestion du responsive
+// =================================================================================================================
+
 @media (max-width: 1430px) {
   #mySkills #skill {
     grid-template-columns: repeat(2, 1fr);
@@ -586,8 +759,22 @@
 }
 
 @media (max-width: 1024px) {
+  .titleMove,
+  .titleMoveSkill {
+    display: none;
+  }
+  #aboutMe .book {
+    margin: 0px;
+  }
   #mySkills #skill {
     grid-template-columns: repeat(1, 1fr);
+  }
+  #portfolio {
+    background-size: 200%;
+    .mySites {
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
   #mySkills #skill .details .description {
     display: block;
@@ -605,18 +792,26 @@
 }
 
 @media (max-width: 767px) {
+  #heroHeader .hero .picture {
+    display: none;
+  }
   #mySkills .skillBox {
     padding: 0;
   }
-  #portfolio .mySites {
-    margin-right: 0;
-    margin-left: 0;
+  #portfolio .mySites .container-preview {
+    width: 100%;
+    margin: 20px;
   }
-  #contact .contactContainer {
-    padding-right: 0;
-    margin-top: 30px;
+  .single-container .siteOnPage .single-content {
+    padding: 0;
   }
-  #contact .imgContact {
-    padding-right: 0;
+  #contact {
+    .contactContainer {
+      padding-right: 0;
+      margin-top: 30px;
+    }
+    .imgContact {
+      padding-right: 0;
+    }
   }
 }

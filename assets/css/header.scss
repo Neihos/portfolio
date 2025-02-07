@@ -1,13 +1,15 @@
 // =================================================================================================================
-//                                              CSS du header et du footer
+//                                              Menu Desktop et tablette
 // =================================================================================================================
 
-// Masque le menu mobile dans les résolutions > 767px
+//-----> Masque le menu mobile dans les résolutions > 767px <-----
+
 #mobileNav {
   display: none;
 }
 
-// Menu Desktop et tablette
+//-----> Réglage du menu Desktop et tablette <-----
+
 #menuHeader {
   height: 100vh;
   display: flex;
@@ -22,7 +24,6 @@
     display: flex;
     width: 100px;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: flex-end;
     padding-right: 10px;
     li {
@@ -46,7 +47,7 @@
             text-shadow: 0 0 20px #000000, 0 0 40px #000000;
             display: none;
           }
-          &:hover {
+          &:hover, &:focus {
             width: 250px;
             p {
               display: inline;
@@ -63,10 +64,20 @@
   }
 }
 
-@media (max-width: 767px) {
+// =================================================================================================================
+//                                              Menu Mobile
+// =================================================================================================================
+
+@media (max-width: 1024px) {
+
+  //-----> Masque le menu Desktop et Tablette dans les résolutions < 767px <-----
+
   #menuHeader {
     display: none;
   }
+
+  //-----> Réglage du menu mobile <-----
+
   #mobileNav {
     display: flex;
     position: relative;
@@ -76,6 +87,8 @@
     .burgerIcon,
     .crossIcon {
       position: absolute;
+      width: clamp(2.5rem, 2.161rem + 1.506vw, 3.125rem);
+      aspect-ratio: 1/1;
       top: 40px;
       right: 40px;
       z-index: 99;
@@ -90,18 +103,19 @@
       height: 100vh;
       align-items: center;
       justify-content: center;
-      background: url("/wp-content/themes/novaneos//assets/images/fondPreview.webp") repeat center;
+      background: url("/wp-content/themes/novaneos/assets/images/damierBleu.webp") repeat center;
+      background-size: 300%;
       ul li {
         list-style: none;
         a {
           text-decoration: none;
           i {
             display: inline-flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             color: rgb(255, 255, 255);
             font-size: 25px;
-            background-color: rgb(206, 16, 16);
+            background-color: var(--tertiary-color);
             border-radius: 30px;
             margin: 15px;
             padding: 20px;

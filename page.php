@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-<div class="main-container">
+<div class="page-container">
     <?php 
     // Vérifie s'il y a des posts/pages à afficher
     if ( have_posts() ) :

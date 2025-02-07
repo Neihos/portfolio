@@ -18,32 +18,32 @@
   <nav id="menuHeader">
     <ul>
       <li>  
-          <a href="<?php echo home_url(); ?>">
+          <a href="<?php echo home_url(); ?>" aria-label="Acceuil">
             <i class="fa-solid fa-house-chimney"><p>Acceuil</p></i>
           </a> 
       </li>
       <li>      
-          <a href="<?php echo home_url(); ?>/#aboutMe">
+          <a href="<?php echo home_url(); ?>/#aboutMe" aria-label="About me">
             <i class="fa-solid fa-user"><p>Qui suis-je ?</p></i>
           </a>
       </li>
       <li>      
-          <a href="<?php echo home_url(); ?>/#mySkills">
+          <a href="<?php echo home_url(); ?>/#mySkills" aria-label="Mes skills">
             <i class="fa-solid fa-toolbox"><p>Skills</p></i>
           </a>
       </li>
       <li>      
-          <a href="<?php echo home_url(); ?>/#portfolio">
+          <a href="<?php echo home_url(); ?>/#portfolio" aria-label="Portfolio">
             <i class="fa-solid fa-laptop-file"><p>Portfolio</p></i>
           </a>
       </li>
       <li>      
-          <a href="<?php echo home_url(); ?>/#contact">
+          <a href="<?php echo home_url(); ?>/#contact" aria-label="Contact">
             <i class="fa-solid fa-envelopes-bulk"><p>Contact</p></i>
           </a>
       </li>
       <li>      
-          <a href="https://github.com/neihos">
+          <a href="https://github.com/neihos" aria-label="Github">
             <i class="fa-brands fa-github"><p>GitHub</p></i>
           </a>
       </li>
@@ -58,28 +58,28 @@
     <section class="mobileContent">
       <ul>
         <li>  
-          <a href="<?php echo home_url(); ?>">
+          <a href="<?php echo home_url(); ?>" aria-label="Accueil">
             <i class="fa-solid fa-house-chimney"><p>Accueil</p></i>
           </a> 
         </li>  
           <li>      
-           <a href="<?php echo home_url(); ?>/#mySkills">
-            <i class="fa-solid fa-user"><p>Skills</p></i>
+           <a href="<?php echo home_url(); ?>/#mySkills" aria-label="Mes skills">
+            <i class="fa-solid fa-user"><p>Mes skills</p></i>
           </a>
         </li>
         <li>      
-          <a href="<?php echo home_url(); ?>/#portfolio">
+          <a href="<?php echo home_url(); ?>/#portfolio" aria-label="Portfolio">
             <i class="fa-solid fa-laptop-file"><p>Portfolio</p></i>
           </a>
         </li>
         <li>      
-          <a href="<?php echo home_url(); ?>/#contact">
+          <a href="<?php echo home_url(); ?>/#contact" aria-label="Contact">
             <i class="fa-solid fa-envelopes-bulk"><p>Contact</p></i>
           </a>
         </li>
         <li>      
-          <a href="https://github.com/neihos">
-            <i class="fa-brands fa-github"><p>GitHub</p></i>
+          <a href="https://github.com/neihos" aria-label="Github">
+            <i class="fa-brands fa-github"><p>Github</p></i>
           </a>
         </li>
       </ul>

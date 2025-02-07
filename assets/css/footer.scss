@@ -1,0 +1,28 @@
+// =================================================================================================================
+//                                              CSS du footer
+// =================================================================================================================
+
+.footer {
+  color: var(--primary-color);
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  .footerContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    a {
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+    .logoReseaux {
+      display: flex;
+      gap: clamp(0.625rem, 0.42rem + 0.909vw, 1.875rem);
+      a i {
+        font-size: 30px;
+      }
+    }
+  }
+}
