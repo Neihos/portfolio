@@ -4,7 +4,8 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".main-container")) {
-    /******* Animations des cercles des skills *******/
+    
+    //-----> Animations des cercles des skills <-----
 
     function skillup() {
       const skillElements = [

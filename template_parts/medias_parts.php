@@ -1,4 +1,7 @@
 <?php 
+
+// Fonction pour gérer les images directement depuis Wordpress avec leur ID
+
 function get_image_html($image_id) {
     $image_url = wp_get_attachment_image_url($image_id, 'full'); 
     $srcset = wp_get_attachment_image_srcset($image_id, 'full');

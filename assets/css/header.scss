@@ -87,9 +87,9 @@
     .burgerIcon,
     .crossIcon {
       position: absolute;
-      width: clamp(2.5rem, 2.161rem + 1.506vw, 3.125rem);
+      width: 35px;
       aspect-ratio: 1/1;
-      top: 40px;
+      top: 35px;
       right: 40px;
       z-index: 99;
     }

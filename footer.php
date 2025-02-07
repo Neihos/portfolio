@@ -5,8 +5,8 @@
         <a href="https://novaneos.fr/">&copy;Novaneos</a>
         <div>
         <div class="logoReseaux">
-            <a href="https://www.linkedin.com/in/nathanael-detourbe-7a5b02340/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/neihos"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/nathanael-detourbe-7a5b02340/" aria-label="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/neihos" aria-label="Github"><i class="fa-brands fa-github"></i></a>
         </div>
     </div>
 </footer>
