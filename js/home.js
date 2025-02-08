@@ -35,17 +35,17 @@ document.addEventListener("DOMContentLoaded", () => {
             const targetNumber = skillElement.querySelector("#number");
 
             if (skillElement.id === "myHtml") {
-              animateCounter(targetNumber, 90, 15);
+              animateCounter(targetNumber, 90, 25);
             } else if (skillElement.id === "myWordpress") {
-              animateCounter(targetNumber, 85, 15);
+              animateCounter(targetNumber, 85, 25);
             } else if (skillElement.id === "myCss") {
-              animateCounter(targetNumber, 75, 17);
+              animateCounter(targetNumber, 75, 27);
             } else if (skillElement.id === "sql") {
-              animateCounter(targetNumber, 45, 35);
+              animateCounter(targetNumber, 45, 45);
             } else if (skillElement.id === "myJavascript") {
               animateCounter(targetNumber, 60, 25);
             } else if (skillElement.id === "myPhp") {
-              animateCounter(targetNumber, 55, 27);
+              animateCounter(targetNumber, 55, 37);
             }
 
             observer.unobserve(skillElement); // Stopper l'observation après le déclenchement

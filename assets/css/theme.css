@@ -154,6 +154,9 @@
   position: relative;
   height: 100vh;
 }
+#heroHeader .versionTabMobile {
+  display: none;
+}
 #heroHeader picture {
   position: absolute;
   width: 100%;
@@ -839,6 +842,12 @@
   }
 }
 @media (max-width: 1024px) {
+  #heroHeader .versionDesktop {
+    display: none;
+  }
+  #heroHeader .versionTabMobile {
+    display: block;
+  }
   .titleMove,
   .titleMoveSkill {
     display: none;
