@@ -47,7 +47,7 @@ function siteDisplay_event() {
                     $site_html .= '<img class="imgTablette" src="/wp-content/themes/novaneos/assets/images/tablette.webp" alt="Tablette">';
                     $site_html .= '<div class="imgInTablette">';
                     $site_html .= '<img src="' . esc_url($site_preview_url) . '"
-                                        alt="' . esc_attr(get_the_title()) . '" 
+                                        alt="illustration du site nommé : ' . esc_attr(get_the_title()) . '" 
                                         data-link="' . esc_url($post_link) . '">';
                     $site_html .= '</div>';
                     $site_html .= '</div>';

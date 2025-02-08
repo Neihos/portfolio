@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const observerOptions = {
         root: null,
-        threshold: 1, // 100% du cercle visible
+        threshold: 0.5, // 90% du cercle visible
         rootMargin: "0px 0px -5% 0px",
       };
 

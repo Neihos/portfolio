@@ -44,7 +44,7 @@ function load_more_sites_ajax() {
                     echo '<img class="imgTablette" src="/wp-content/themes/novaneos/assets/images/tablette.webp" alt="Tablette">';
                     echo '<div class="imgInTablette">';
                     echo '<img src="' . esc_url($site_preview_url) . '"
-                                        alt="' . esc_attr(get_the_title()) . '" 
+                                        alt="illustration du site nommé : ' . esc_attr(get_the_title()) . '" 
                                         data-link="' . esc_url($post_link) . '">';
                     echo '</div>';
                     echo '</div>';
