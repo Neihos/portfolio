@@ -844,6 +844,8 @@
     display: none;
   }
   #aboutMe .book {
+    aspect-ratio: 280/400;
+    width: min(56vh, 85vw);
     margin: 0px;
   }
   #mySkills #skill {
