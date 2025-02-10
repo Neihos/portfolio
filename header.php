@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bienvenue sur le site de Novaneos, entreprise spécialisée dans la création de sites internet sur mesure, le développement web et l'accompagnement en stratégie digitale. Notre équipe de développeurs experts crée des solutions web performantes, adaptées à vos besoins. De la conception de sites vitrines à l'e-commerce, en passant par l'optimisation SEO et la gestion des réseaux sociaux, Novaneos vous aide à booster votre présence en ligne.">
-    <meta name="keywords" content="création de site internet, développement web, développement de sites, conception de site sur mesure, stratégie digitale, SEO, réseaux sociaux, e-commerce, développement front-end, développement back-end, optimisation web, web design, responsive design, référencement SEO, développement WordPress, stratégie de communication digitale, marketing digital">
-    <meta name="author" content="Neihos">
-    <meta name="title" content="Novaneos - Création de Sites Internet & Développement Web | Stratégie Digitale et Réseaux Sociaux">
+    <meta name="description" content="Découvrez le portfolio de Nathanael Detourbe, développeur web spécialisé dans la création de sites WordPress. Explorez mes compétences en développement front-end et mes projets récents. Contactez-moi pour réaliser vos idées !">
+    <meta name="keywords" content="développeur web, WordPress, création de sites web, gestion SEO, optimisation SEO, développement front-end, design web, portfolio, services web, développement de thèmes WordPress, plugins WordPress">
+    <meta name="author" content="Nathanael Detourbe">
     <meta name="robots" content="index, follow">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <title>Novaneos</title>
+    <title>Développeur Web Spécialisé WordPress | Portfolio de Nathanael Detourbe</title>
+
     <?php wp_head(); ?>
 </head>
     
